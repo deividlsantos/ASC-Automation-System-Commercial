@@ -16,7 +16,7 @@ namespace ASC_Automation_System_Commercial
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Load());
         }
     }
 }
