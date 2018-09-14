@@ -16,5 +16,22 @@ namespace ASC_Automation_System_Commercial
         {
             InitializeComponent();
         }
+
+        private void timerLoader_Tick(object sender, EventArgs e)
+        {
+            if(loadBar.Value < 100)
+            {
+                loadBar.Value = loadBar.Value + 5;
+            }
+            else
+            {
+                timerLoader.Enabled = false;
+                this.Hide();
+
+                TelaLogin abre = new TelaLogin();
+                abre.ShowDialog();
+            }
+
+        }
     }
 }
