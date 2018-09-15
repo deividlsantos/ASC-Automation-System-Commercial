@@ -171,6 +171,35 @@ LOCK TABLES `funcionario` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `produto`
+--
+
+DROP TABLE IF EXISTS `produto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `produto` (
+  `codigo_barra` bigint(13) NOT NULL,
+  `tipo` varchar(60) NOT NULL,
+  `fabricante` varchar(60) NOT NULL,
+  `modelo` varchar(60) NOT NULL,
+  `cor` varchar(20) NOT NULL,
+  `preco` decimal(20,0) NOT NULL,
+  `quantidade` int(10) DEFAULT NULL,
+  PRIMARY KEY (`codigo_barra`),
+  UNIQUE KEY `codigo_barra` (`codigo_barra`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `produto`
+--
+
+LOCK TABLES `produto` WRITE;
+/*!40000 ALTER TABLE `produto` DISABLE KEYS */;
+/*!40000 ALTER TABLE `produto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping events for database 'automationcommercial'
 --
 
@@ -187,4 +216,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-14 21:07:21
+-- Dump completed on 2018-09-14 21:59:21
