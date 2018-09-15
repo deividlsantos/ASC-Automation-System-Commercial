@@ -131,6 +131,46 @@ LOCK TABLES `fornecedor` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `funcionario`
+--
+
+DROP TABLE IF EXISTS `funcionario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `funcionario` (
+  `id_funcionario` int(11) NOT NULL AUTO_INCREMENT,
+  `id_endereco_fk` bigint(11) NOT NULL,
+  `id_cargo_fk` int(11) NOT NULL,
+  `nome` varchar(80) NOT NULL,
+  `sexo` varchar(10) NOT NULL,
+  `data_nascimento` date NOT NULL,
+  `estado_civil` varchar(10) NOT NULL,
+  `cpf` int(11) NOT NULL,
+  `rg` int(9) NOT NULL,
+  `telefone` int(10) DEFAULT NULL,
+  `celular` int(11) NOT NULL,
+  `salario` decimal(20,0) NOT NULL,
+  `situacao` varchar(60) DEFAULT NULL,
+  `data_admissao` date NOT NULL,
+  `data_demissao` date DEFAULT NULL,
+  PRIMARY KEY (`id_funcionario`),
+  KEY `id_endereco_fk` (`id_endereco_fk`),
+  KEY `id_cargo_fk` (`id_cargo_fk`),
+  CONSTRAINT `funcionario_ibfk_1` FOREIGN KEY (`id_endereco_fk`) REFERENCES `endereco` (`id_endereco`),
+  CONSTRAINT `funcionario_ibfk_2` FOREIGN KEY (`id_cargo_fk`) REFERENCES `cargo` (`id_cargo`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `funcionario`
+--
+
+LOCK TABLES `funcionario` WRITE;
+/*!40000 ALTER TABLE `funcionario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Dumping events for database 'automationcommercial'
 --
 
@@ -147,4 +187,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-14 20:18:46
+-- Dump completed on 2018-09-14 21:07:21
