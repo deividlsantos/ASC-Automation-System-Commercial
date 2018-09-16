@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ASC_Automation_System_Commercial.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,36 @@ namespace ASC_Automation_System_Commercial
         public TelaLogin()
         {
             InitializeComponent();
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            if(txtLogin.Text == "" || txtSenha.Text == "")
+            {
+                MessageBox.Show("Digite um usuario e uma senha");
+            }
+            else
+            {
+                try
+                {
+                    LoginDAO loginBD = new LoginDAO();
+                    if(loginBD.logar(login:txtLogin.Text, senha: txtSenha.Text))
+                    {
+                        this.Close();
+                        TelaPrincipal abre = new TelaPrincipal();
+                        abre.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login ou senha invalidos");
+                        Close();
+                    }
+                }
+                catch(Exception c)
+                {
+                    MessageBox.Show(c.ToString());
+                }
+            }
         }
     }
 }
