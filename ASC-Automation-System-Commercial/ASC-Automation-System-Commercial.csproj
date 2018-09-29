@@ -49,13 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ClienteDAO.cs" />
+    <Compile Include="DAO\EnderecoDAO.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
+    <Compile Include="CadastrarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarClientes.Designer.cs">
+      <DependentUpon>CadastrarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcurarEndereco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProcurarEndereco.Designer.cs">
+      <DependentUpon>ProcurarEndereco.cs</DependentUpon>
+    </Compile>
     <Compile Include="Load.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Load.Designer.cs">
       <DependentUpon>Load.cs</DependentUpon>
     </Compile>
+    <Compile Include="MODEL\Cliente.cs" />
+    <Compile Include="MODEL\Endereco.cs" />
     <Compile Include="MODEL\Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -71,6 +87,12 @@
     <Compile Include="TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CadastrarClientes.resx">
+      <DependentUpon>CadastrarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProcurarEndereco.resx">
+      <DependentUpon>ProcurarEndereco.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Load.resx">
       <DependentUpon>Load.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +108,9 @@
     </Compile>
     <EmbeddedResource Include="TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaPrincipal.resx">
+      <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
