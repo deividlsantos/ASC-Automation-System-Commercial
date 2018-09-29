@@ -11,3 +11,6 @@ C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-Sys
 C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.TelaLogin.resources
 C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\bin\Debug\MySql.Data.dll
 C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC-Automation-System-Commercial.csproj.CopyComplete
+C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.TelaPrincipal.resources
+C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.CadastrarClientes.resources
+C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.ProcurarEndereco.resources
