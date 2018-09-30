@@ -32,8 +32,6 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -63,9 +61,7 @@
             // 
             this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarToolStripMenuItem,
-            this.listarToolStripMenuItem,
-            this.alterarToolStripMenuItem,
-            this.excluirToolStripMenuItem});
+            this.listarToolStripMenuItem});
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.clientesToolStripMenuItem.Text = "Clientes";
@@ -83,18 +79,6 @@
             this.listarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.listarToolStripMenuItem.Text = "Listar";
             this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
-            // 
-            // alterarToolStripMenuItem
-            // 
-            this.alterarToolStripMenuItem.Name = "alterarToolStripMenuItem";
-            this.alterarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.alterarToolStripMenuItem.Text = "Alterar";
-            // 
-            // excluirToolStripMenuItem
-            // 
-            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
-            this.excluirToolStripMenuItem.Text = "Excluir";
             // 
             // produtosToolStripMenuItem
             // 
@@ -122,6 +106,7 @@
             this.dgvLista.RowTemplate.Height = 24;
             this.dgvLista.Size = new System.Drawing.Size(775, 352);
             this.dgvLista.TabIndex = 1;
+            this.dgvLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellClick);
             // 
             // txtCpfCliente
             // 
@@ -181,8 +166,6 @@
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alterarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem2;
         private System.Windows.Forms.DataGridView dgvLista;
         private System.Windows.Forms.TextBox txtCpfCliente;

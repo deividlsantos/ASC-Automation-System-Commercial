@@ -39,7 +39,6 @@ namespace ASC_Automation_System_Commercial
         {
             try
             {
-                EnderecoDAO enderecoBD = new EnderecoDAO();
                 ClienteDAO clienteBD = new ClienteDAO();
                 string sexo = null;
                 if (rdbMasc.Checked)
@@ -56,7 +55,7 @@ namespace ASC_Automation_System_Commercial
                     Id_endereco_fk = Convert.ToInt32(txtIdEndereco.Text),
                     Nome = txtNome.Text,
                     Rg = txtRg.Text,
-                    Data_nascimento = dateTimeNasc.Text,
+                    Data_nascimento = txtNascimento.Text,
                     Cpf = txtCpf.Text,
                     Email = txtEmail.Text,
                     Sexo = sexo,
@@ -83,6 +82,88 @@ namespace ASC_Automation_System_Commercial
             {
                 EnderecoDAO enderecoBD = new EnderecoDAO();
                 
+            }
+            catch (Exception c)
+            {
+                MessageBox.Show(c.ToString());
+            }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClienteDAO clienteBD = new ClienteDAO();
+                string sexo = null;
+                if (rdbMasc.Checked)
+                {
+                    sexo = rdbMasc.Text;
+                }
+                if (rdbFem.Checked)
+                {
+                    sexo = rdbFem.Text;
+                }
+
+                Cliente clienteReg = new Cliente
+                {
+                    Id_cliente = Convert.ToInt32(txtIdCliente.Text),
+                    Id_endereco_fk = Convert.ToInt32(txtIdEndereco.Text),
+                    Nome = txtNome.Text,
+                    Rg = txtRg.Text,
+                    Data_nascimento = txtNascimento.Text,
+                    Cpf = txtCpf.Text,
+                    Email = txtEmail.Text,
+                    Sexo = sexo,
+                    Telefone = txtTelefone.Text,
+                    Celular = txtCelular.Text,
+                    Foto = txtImg.Text,
+                    Numero_casa = Convert.ToInt32(txtNumCasa.Text),
+                    Pais = txtPais.Text,
+                };
+                clienteBD.Alterar(clienteReg);
+                MessageBox.Show("Cliente Alterado com sucesso");
+                this.Close();
+            }
+            catch (Exception c)
+            {
+                MessageBox.Show(c.ToString());
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ClienteDAO clienteBD = new ClienteDAO();
+                string sexo = null;
+                if (rdbMasc.Checked)
+                {
+                    sexo = rdbMasc.Text;
+                }
+                if (rdbFem.Checked)
+                {
+                    sexo = rdbFem.Text;
+                }
+
+                Cliente clienteReg = new Cliente
+                {
+                    Id_cliente = Convert.ToInt32(txtIdCliente.Text),
+                    Id_endereco_fk = Convert.ToInt32(txtIdEndereco.Text),
+                    Nome = txtNome.Text,
+                    Rg = txtRg.Text,
+                    Data_nascimento = txtNascimento.Text,
+                    Cpf = txtCpf.Text,
+                    Email = txtEmail.Text,
+                    Sexo = sexo,
+                    Telefone = txtTelefone.Text,
+                    Celular = txtCelular.Text,
+                    Foto = txtImg.Text,
+                    Numero_casa = Convert.ToInt32(txtNumCasa.Text),
+                    Pais = txtPais.Text,
+                };
+                clienteBD.Excluir(clienteReg);
+                MessageBox.Show("Cliente Alterado com sucesso");
+                this.Close();
             }
             catch (Exception c)
             {
