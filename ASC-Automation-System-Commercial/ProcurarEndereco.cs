@@ -28,11 +28,31 @@ namespace ASC_Automation_System_Commercial
 
         private void dgvEndereco_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow LinhaSelecionada;
-            LinhaSelecionada = dgvEndereco.CurrentRow;
-            CadastrarClientes abre = new CadastrarClientes();
-            abre.txtIdEndereco.Text = LinhaSelecionada.Cells[0].Value.ToString();
-            abre.Show();
+            if (btnVerificar.Visible == true) { 
+                DataGridViewRow LinhaSelecionada;
+                LinhaSelecionada = dgvEndereco.CurrentRow;
+                CadastrarClientes abre = new CadastrarClientes();
+                abre.txtIdEndereco.Text = LinhaSelecionada.Cells[0].Value.ToString();
+                abre.Show();
+            }
+            else
+            {
+                if(btnLocalizar.Visible == true)
+                {
+                    DataGridViewRow LinhaSelecionada;
+                    LinhaSelecionada = dgvEndereco.CurrentRow;
+                    CadastrarFuncionarios abre = new CadastrarFuncionarios();
+                    abre.txtIdEndereco.Text = LinhaSelecionada.Cells[0].Value.ToString();
+                    abre.Show();
+                }
+            }
+        }
+
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            EnderecoDAO enderecoBD = new EnderecoDAO();
+            pesquisa = "cep";
+            dgvEndereco.DataSource = enderecoBD.getEndereco(pesquisa, txtCep.Text);
         }
     }
 }

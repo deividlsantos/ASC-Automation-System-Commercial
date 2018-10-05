@@ -21,11 +21,16 @@ namespace ASC_Automation_System_Commercial
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProcurarEndereco abre = new ProcurarEndereco();
+            abre.btnVerificar.Visible = true;
+            abre.btnLocalizar.Visible = false;
             abre.ShowDialog();
         }
 
         private void listarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            lblFuncionario.Visible = false;
+            txtCpfFun.Visible = false;
+            btnListFun.Visible = false;
             lblCpfCliente.Visible = true;
             txtCpfCliente.Visible = true;
             btnListaClientes.Visible = true;
@@ -76,6 +81,24 @@ namespace ASC_Automation_System_Commercial
             abre.txtPais.Text = LinhaSelecionada.Cells[16].Value.ToString();
             abre.Show();
             
+        }
+
+        private void cadastrarFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcurarEndereco abre = new ProcurarEndereco();
+            abre.btnLocalizar.Visible = true;
+            abre.btnVerificar.Visible = false;
+            abre.Show();
+        }
+
+        private void listarFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lblCpfCliente.Visible = false;
+            txtCpfCliente.Visible = false;
+            btnListaClientes.Visible = false;
+            lblFuncionario.Visible = true;
+            txtCpfFun.Visible = true;
+            btnListFun.Visible = true;
         }
     }
 }

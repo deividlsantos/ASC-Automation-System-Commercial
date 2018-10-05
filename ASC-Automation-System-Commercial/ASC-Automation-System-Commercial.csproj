@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastrarFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastrarFuncionarios.Designer.cs">
+      <DependentUpon>CadastrarFuncionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\EnderecoDAO.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
@@ -89,6 +95,9 @@
     </Compile>
     <EmbeddedResource Include="CadastrarClientes.resx">
       <DependentUpon>CadastrarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastrarFuncionarios.resx">
+      <DependentUpon>CadastrarFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProcurarEndereco.resx">
       <DependentUpon>ProcurarEndereco.cs</DependentUpon>

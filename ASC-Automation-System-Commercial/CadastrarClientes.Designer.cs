@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -46,6 +47,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtRg = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.lblIdCliente = new System.Windows.Forms.Label();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
+            this.txtNascimento = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.txtPais = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -58,13 +63,11 @@
             this.gpbSexo = new System.Windows.Forms.GroupBox();
             this.rdbFem = new System.Windows.Forms.RadioButton();
             this.rdbMasc = new System.Windows.Forms.RadioButton();
-            this.txtNascimento = new System.Windows.Forms.TextBox();
-            this.txtIdCliente = new System.Windows.Forms.TextBox();
-            this.lblIdCliente = new System.Windows.Forms.Label();
-            this.btnExcluir = new System.Windows.Forms.Button();
+            this.errorEmail = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbImg)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gpbSexo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -77,9 +80,9 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(129, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 21);
+            this.label1.Size = new System.Drawing.Size(60, 21);
             this.label1.TabIndex = 0;
-            this.label1.Text = "NOME";
+            this.label1.Text = "Nome";
             // 
             // txtNome
             // 
@@ -95,9 +98,9 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(377, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 21);
+            this.label2.Size = new System.Drawing.Size(33, 21);
             this.label2.TabIndex = 10;
-            this.label2.Text = "RG";
+            this.label2.Text = "Rg";
             // 
             // label3
             // 
@@ -105,9 +108,9 @@
             this.label3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(248, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 21);
+            this.label3.Size = new System.Drawing.Size(62, 21);
             this.label3.TabIndex = 12;
-            this.label3.Text = "E-MAIL";
+            this.label3.Text = "E-Mail";
             // 
             // txtTelefone
             // 
@@ -130,9 +133,9 @@
             this.label4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(6, 160);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 21);
+            this.label4.Size = new System.Drawing.Size(84, 21);
             this.label4.TabIndex = 14;
-            this.label4.Text = "TELEFONE";
+            this.label4.Text = "Telefone";
             // 
             // ptbImg
             // 
@@ -149,9 +152,9 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(248, 160);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 21);
+            this.label5.Size = new System.Drawing.Size(69, 21);
             this.label5.TabIndex = 16;
-            this.label5.Text = "CELULAR";
+            this.label5.Text = "Celular";
             // 
             // btnInserir
             // 
@@ -185,9 +188,9 @@
             this.label6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(6, 87);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 21);
+            this.label6.Size = new System.Drawing.Size(39, 21);
             this.label6.TabIndex = 18;
-            this.label6.Text = "CPF";
+            this.label6.Text = "Cpf";
             // 
             // txtEmail
             // 
@@ -196,6 +199,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(229, 27);
             this.txtEmail.TabIndex = 19;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            this.txtEmail.Validated += new System.EventHandler(this.txtEmail_Validated);
             // 
             // label8
             // 
@@ -254,6 +259,47 @@
             this.groupBox1.TabIndex = 26;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do Cliente";
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(628, 352);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(142, 54);
+            this.btnExcluir.TabIndex = 37;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Visible = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // lblIdCliente
+            // 
+            this.lblIdCliente.AutoSize = true;
+            this.lblIdCliente.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdCliente.Location = new System.Drawing.Point(9, 23);
+            this.lblIdCliente.Name = "lblIdCliente";
+            this.lblIdCliente.Size = new System.Drawing.Size(93, 21);
+            this.lblIdCliente.TabIndex = 36;
+            this.lblIdCliente.Text = "Id Cliente";
+            this.lblIdCliente.Visible = false;
+            // 
+            // txtIdCliente
+            // 
+            this.txtIdCliente.Enabled = false;
+            this.txtIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdCliente.Location = new System.Drawing.Point(13, 47);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(109, 27);
+            this.txtIdCliente.TabIndex = 35;
+            this.txtIdCliente.Visible = false;
+            // 
+            // txtNascimento
+            // 
+            this.txtNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNascimento.Location = new System.Drawing.Point(613, 47);
+            this.txtNascimento.Name = "txtNascimento";
+            this.txtNascimento.Size = new System.Drawing.Size(193, 27);
+            this.txtNascimento.TabIndex = 34;
             // 
             // btnSalvar
             // 
@@ -327,7 +373,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(628, 292);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(146, 54);
+            this.btnCancelar.Size = new System.Drawing.Size(142, 54);
             this.btnCancelar.TabIndex = 26;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -377,46 +423,9 @@
             this.rdbMasc.Text = "Masculino";
             this.rdbMasc.UseVisualStyleBackColor = true;
             // 
-            // txtNascimento
+            // errorEmail
             // 
-            this.txtNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNascimento.Location = new System.Drawing.Point(613, 47);
-            this.txtNascimento.Name = "txtNascimento";
-            this.txtNascimento.Size = new System.Drawing.Size(193, 27);
-            this.txtNascimento.TabIndex = 34;
-            // 
-            // txtIdCliente
-            // 
-            this.txtIdCliente.Enabled = false;
-            this.txtIdCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdCliente.Location = new System.Drawing.Point(13, 47);
-            this.txtIdCliente.Name = "txtIdCliente";
-            this.txtIdCliente.Size = new System.Drawing.Size(109, 27);
-            this.txtIdCliente.TabIndex = 35;
-            this.txtIdCliente.Visible = false;
-            // 
-            // lblIdCliente
-            // 
-            this.lblIdCliente.AutoSize = true;
-            this.lblIdCliente.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdCliente.Location = new System.Drawing.Point(9, 23);
-            this.lblIdCliente.Name = "lblIdCliente";
-            this.lblIdCliente.Size = new System.Drawing.Size(93, 21);
-            this.lblIdCliente.TabIndex = 36;
-            this.lblIdCliente.Text = "Id Cliente";
-            this.lblIdCliente.Visible = false;
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Location = new System.Drawing.Point(628, 352);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(142, 54);
-            this.btnExcluir.TabIndex = 37;
-            this.btnExcluir.Text = "EXCLUIR";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Visible = false;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            this.errorEmail.ContainerControl = this;
             // 
             // CadastrarClientes
             // 
@@ -425,12 +434,14 @@
             this.ClientSize = new System.Drawing.Size(865, 480);
             this.Controls.Add(this.groupBox1);
             this.Name = "CadastrarClientes";
-            this.Text = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Cadastrar Clientes";
             ((System.ComponentModel.ISupportInitialize)(this.ptbImg)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gpbSexo.ResumeLayout(false);
             this.gpbSexo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -470,5 +481,6 @@
         public System.Windows.Forms.TextBox txtIdCliente;
         public System.Windows.Forms.Label lblIdCliente;
         public System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.ErrorProvider errorEmail;
     }
 }
