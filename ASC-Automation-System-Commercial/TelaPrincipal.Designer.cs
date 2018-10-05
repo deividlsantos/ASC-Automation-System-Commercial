@@ -47,6 +47,7 @@
             this.lblFuncionario = new System.Windows.Forms.Label();
             this.txtCpfFun = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -202,11 +203,21 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.comboBox1.Location = new System.Drawing.Point(469, 55);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.TabIndex = 8;
+            // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 455);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnListFun);
             this.Controls.Add(this.lblFuncionario);
             this.Controls.Add(this.txtCpfFun);
@@ -248,5 +259,6 @@
         private System.Windows.Forms.TextBox txtCpfFun;
         private System.Windows.Forms.ToolStripMenuItem cadastrarDependentesToolStripMenuItem;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

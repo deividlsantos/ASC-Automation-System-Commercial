@@ -15,3 +15,4 @@ C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-Sys
 C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.CadastrarClientes.resources
 C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.ProcurarEndereco.resources
 C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.CadastrarFuncionarios.resources
+C:\Users\deivi\Documents\TCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.TelaProvisoria.resources

@@ -32,7 +32,7 @@ namespace ASC_Automation_System_Commercial
                     if(loginBD.logar(login:txtLogin.Text, senha: txtSenha.Text))
                     {
                         this.Close();
-                        TelaPrincipal abre = new TelaPrincipal();
+                        TelaProvisoria abre = new TelaProvisoria();
                         abre.Show();
                     }
                     else
