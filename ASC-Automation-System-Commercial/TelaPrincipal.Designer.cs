@@ -28,212 +28,189 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarFuncionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarDependentesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.produtosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.produtosToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.txtCpfCliente = new System.Windows.Forms.TextBox();
-            this.lblCpfCliente = new System.Windows.Forms.Label();
-            this.btnListaClientes = new System.Windows.Forms.Button();
-            this.btnListFun = new System.Windows.Forms.Button();
-            this.lblFuncionario = new System.Windows.Forms.Label();
-            this.txtCpfFun = new System.Windows.Forms.TextBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orcamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.utilitariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnCadasClien = new System.Windows.Forms.Button();
+            this.btnCadasFunc = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.clientesToolStripMenuItem,
-            this.produtosToolStripMenuItem,
-            this.produtosToolStripMenuItem1,
-            this.produtosToolStripMenuItem2});
+            this.cadastrosToolStripMenuItem,
+            this.vendasToolStripMenuItem,
+            this.orcamentoToolStripMenuItem,
+            this.utilitariosToolStripMenuItem,
+            this.usuariosToolStripMenuItem,
+            this.sistemaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1089, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // clientesToolStripMenuItem
+            // cadastrosToolStripMenuItem
             // 
-            this.clientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem,
-            this.listarToolStripMenuItem});
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
-            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.cadastrosToolStripMenuItem.Text = "Cadastros";
             // 
-            // cadastrarToolStripMenuItem
+            // vendasToolStripMenuItem
             // 
-            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
-            this.cadastrarToolStripMenuItem.Text = "Cadastrar";
-            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
+            this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
+            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.vendasToolStripMenuItem.Text = "Vendas";
             // 
-            // listarToolStripMenuItem
+            // orcamentoToolStripMenuItem
             // 
-            this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
-            this.listarToolStripMenuItem.Text = "Listar";
-            this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
+            this.orcamentoToolStripMenuItem.Name = "orcamentoToolStripMenuItem";
+            this.orcamentoToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
+            this.orcamentoToolStripMenuItem.Text = "Orcamento";
             // 
-            // produtosToolStripMenuItem
+            // utilitariosToolStripMenuItem
             // 
-            this.produtosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarFuncionarioToolStripMenuItem,
-            this.listarFuncionarioToolStripMenuItem,
-            this.cadastrarDependentesToolStripMenuItem});
-            this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
-            this.produtosToolStripMenuItem.Text = "Funcionarios";
+            this.utilitariosToolStripMenuItem.Name = "utilitariosToolStripMenuItem";
+            this.utilitariosToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.utilitariosToolStripMenuItem.Text = "Utilitarios";
             // 
-            // cadastrarFuncionarioToolStripMenuItem
+            // usuariosToolStripMenuItem
             // 
-            this.cadastrarFuncionarioToolStripMenuItem.Name = "cadastrarFuncionarioToolStripMenuItem";
-            this.cadastrarFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.cadastrarFuncionarioToolStripMenuItem.Text = "Cadastrar Funcionario";
-            this.cadastrarFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarFuncionarioToolStripMenuItem_Click);
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
             // 
-            // listarFuncionarioToolStripMenuItem
+            // sistemaToolStripMenuItem
             // 
-            this.listarFuncionarioToolStripMenuItem.Name = "listarFuncionarioToolStripMenuItem";
-            this.listarFuncionarioToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.listarFuncionarioToolStripMenuItem.Text = "Listar Funcionario";
-            this.listarFuncionarioToolStripMenuItem.Click += new System.EventHandler(this.listarFuncionarioToolStripMenuItem_Click);
+            this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
+            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.sistemaToolStripMenuItem.Text = "Sistema";
             // 
-            // cadastrarDependentesToolStripMenuItem
+            // button7
             // 
-            this.cadastrarDependentesToolStripMenuItem.Name = "cadastrarDependentesToolStripMenuItem";
-            this.cadastrarDependentesToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
-            this.cadastrarDependentesToolStripMenuItem.Text = "Cadastrar Dependentes";
+            this.button7.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.dados;
+            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(13, 425);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(66, 56);
+            this.button7.TabIndex = 7;
+            this.button7.UseVisualStyleBackColor = true;
             // 
-            // produtosToolStripMenuItem1
+            // button6
             // 
-            this.produtosToolStripMenuItem1.Name = "produtosToolStripMenuItem1";
-            this.produtosToolStripMenuItem1.Size = new System.Drawing.Size(110, 24);
-            this.produtosToolStripMenuItem1.Text = "Fornecedores";
+            this.button6.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.vendas;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(13, 361);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(66, 56);
+            this.button6.TabIndex = 6;
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // produtosToolStripMenuItem2
+            // button5
             // 
-            this.produtosToolStripMenuItem2.Name = "produtosToolStripMenuItem2";
-            this.produtosToolStripMenuItem2.Size = new System.Drawing.Size(80, 24);
-            this.produtosToolStripMenuItem2.Text = "Produtos";
+            this.button5.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.pesquisa;
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(13, 288);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(66, 65);
+            this.button5.TabIndex = 5;
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // dgvLista
+            // button4
             // 
-            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(13, 91);
-            this.dgvLista.Name = "dgvLista";
-            this.dgvLista.RowTemplate.Height = 24;
-            this.dgvLista.Size = new System.Drawing.Size(775, 352);
-            this.dgvLista.TabIndex = 1;
-            this.dgvLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLista_CellClick);
+            this.button4.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.caixas;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(13, 224);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(66, 56);
+            this.button4.TabIndex = 4;
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // txtCpfCliente
+            // button3
             // 
-            this.txtCpfCliente.Location = new System.Drawing.Point(12, 59);
-            this.txtCpfCliente.Name = "txtCpfCliente";
-            this.txtCpfCliente.Size = new System.Drawing.Size(184, 22);
-            this.txtCpfCliente.TabIndex = 2;
-            this.txtCpfCliente.Visible = false;
+            this.button3.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.imgForn;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(13, 160);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(66, 56);
+            this.button3.TabIndex = 3;
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // lblCpfCliente
+            // btnCadasClien
             // 
-            this.lblCpfCliente.AutoSize = true;
-            this.lblCpfCliente.Location = new System.Drawing.Point(15, 36);
-            this.lblCpfCliente.Name = "lblCpfCliente";
-            this.lblCpfCliente.Size = new System.Drawing.Size(164, 17);
-            this.lblCpfCliente.TabIndex = 3;
-            this.lblCpfCliente.Text = "Informe o CPF do Cliente";
-            this.lblCpfCliente.Visible = false;
+            this.btnCadasClien.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.imgFunc;
+            this.btnCadasClien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCadasClien.FlatAppearance.BorderSize = 0;
+            this.btnCadasClien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadasClien.Location = new System.Drawing.Point(13, 32);
+            this.btnCadasClien.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadasClien.Name = "btnCadasClien";
+            this.btnCadasClien.Size = new System.Drawing.Size(66, 56);
+            this.btnCadasClien.TabIndex = 2;
+            this.btnCadasClien.UseVisualStyleBackColor = true;
+            this.btnCadasClien.Click += new System.EventHandler(this.btnCadasClien_Click);
             // 
-            // btnListaClientes
+            // btnCadasFunc
             // 
-            this.btnListaClientes.Location = new System.Drawing.Point(202, 54);
-            this.btnListaClientes.Name = "btnListaClientes";
-            this.btnListaClientes.Size = new System.Drawing.Size(139, 31);
-            this.btnListaClientes.TabIndex = 4;
-            this.btnListaClientes.Text = "Listar Clientes";
-            this.btnListaClientes.UseVisualStyleBackColor = true;
-            this.btnListaClientes.Visible = false;
-            this.btnListaClientes.Click += new System.EventHandler(this.btnListaClientes_Click);
+            this.btnCadasFunc.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.imgClientes;
+            this.btnCadasFunc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCadasFunc.FlatAppearance.BorderSize = 0;
+            this.btnCadasFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadasFunc.Location = new System.Drawing.Point(13, 96);
+            this.btnCadasFunc.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadasFunc.Name = "btnCadasFunc";
+            this.btnCadasFunc.Size = new System.Drawing.Size(66, 56);
+            this.btnCadasFunc.TabIndex = 1;
+            this.btnCadasFunc.UseVisualStyleBackColor = true;
+            this.btnCadasFunc.Click += new System.EventHandler(this.btnCadasFunc_Click);
             // 
-            // btnListFun
-            // 
-            this.btnListFun.Location = new System.Drawing.Point(209, 55);
-            this.btnListFun.Name = "btnListFun";
-            this.btnListFun.Size = new System.Drawing.Size(153, 31);
-            this.btnListFun.TabIndex = 7;
-            this.btnListFun.Text = "Listar Funcionario";
-            this.btnListFun.UseVisualStyleBackColor = true;
-            this.btnListFun.Visible = false;
-            // 
-            // lblFuncionario
-            // 
-            this.lblFuncionario.AutoSize = true;
-            this.lblFuncionario.Location = new System.Drawing.Point(15, 36);
-            this.lblFuncionario.Name = "lblFuncionario";
-            this.lblFuncionario.Size = new System.Drawing.Size(187, 17);
-            this.lblFuncionario.TabIndex = 6;
-            this.lblFuncionario.Text = "Informe o CPF do Funcinario";
-            this.lblFuncionario.Visible = false;
-            // 
-            // txtCpfFun
-            // 
-            this.txtCpfFun.Location = new System.Drawing.Point(13, 58);
-            this.txtCpfFun.Name = "txtCpfFun";
-            this.txtCpfFun.Size = new System.Drawing.Size(190, 22);
-            this.txtCpfFun.TabIndex = 5;
-            this.txtCpfFun.Visible = false;
-            // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.comboBox1.Location = new System.Drawing.Point(469, 55);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 8;
-            // 
-            // TelaPrincipal
+            // TelaProvisoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 455);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.btnListFun);
-            this.Controls.Add(this.lblFuncionario);
-            this.Controls.Add(this.txtCpfFun);
-            this.Controls.Add(this.btnListaClientes);
-            this.Controls.Add(this.lblCpfCliente);
-            this.Controls.Add(this.txtCpfCliente);
-            this.Controls.Add(this.dgvLista);
+            this.ClientSize = new System.Drawing.Size(1089, 580);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnCadasClien);
+            this.Controls.Add(this.btnCadasFunc);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "TelaPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "TelaPrincipal";
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "TelaProvisoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TelaProvisoria";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,23 +219,18 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem2;
-        private System.Windows.Forms.DataGridView dgvLista;
-        private System.Windows.Forms.TextBox txtCpfCliente;
-        private System.Windows.Forms.Label lblCpfCliente;
-        private System.Windows.Forms.Button btnListaClientes;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionarioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listarFuncionarioToolStripMenuItem;
-        private System.Windows.Forms.Button btnListFun;
-        private System.Windows.Forms.Label lblFuncionario;
-        private System.Windows.Forms.TextBox txtCpfFun;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarDependentesToolStripMenuItem;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ToolStripMenuItem cadastrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orcamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem utilitariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
+        private System.Windows.Forms.Button btnCadasFunc;
+        private System.Windows.Forms.Button btnCadasClien;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }

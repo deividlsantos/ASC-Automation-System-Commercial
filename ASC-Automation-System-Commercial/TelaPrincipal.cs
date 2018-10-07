@@ -1,5 +1,4 @@
-﻿using ASC_Automation_System_Commercial.DAO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,88 +16,17 @@ namespace ASC_Automation_System_Commercial
         {
             InitializeComponent();
         }
-        string pesquisa;
-        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void btnCadasClien_Click(object sender, EventArgs e)
         {
-            ProcurarEndereco abre = new ProcurarEndereco();
-            abre.btnVerificar.Visible = true;
-            abre.btnLocalizar.Visible = false;
+            CadastrarClientes abre = new CadastrarClientes();
             abre.ShowDialog();
         }
 
-        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCadasFunc_Click(object sender, EventArgs e)
         {
-            lblFuncionario.Visible = false;
-            txtCpfFun.Visible = false;
-            btnListFun.Visible = false;
-            lblCpfCliente.Visible = true;
-            txtCpfCliente.Visible = true;
-            btnListaClientes.Visible = true;
-        }
-
-        private void btnListaClientes_Click(object sender, EventArgs e)
-        {
-            pesquisa = "cpf";
-            if (txtCpfCliente.Text != "")
-            {
-                ClienteDAO clienteBD = new ClienteDAO();
-                dgvLista.DataSource = clienteBD.getCliente(pesquisa, txtCpfCliente.Text);
-            }
-            else
-            {
-                MessageBox.Show("Insira o CPF do Cliente!");
-            }
-        }
-
-        private void dgvLista_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow LinhaSelecionada;
-            LinhaSelecionada = dgvLista.CurrentRow;
-            CadastrarClientes abre = new CadastrarClientes();
-            abre.btnSalvar.Visible = true;
-            abre.btnExcluir.Visible = true;
-            abre.lblIdCliente.Visible = true;
-            abre.txtIdCliente.Visible = true;
-            abre.txtIdCliente.Text = LinhaSelecionada.Cells[0].Value.ToString();
-            abre.txtIdEndereco.Text = LinhaSelecionada.Cells[1].Value.ToString();
-            abre.txtNome.Text = LinhaSelecionada.Cells[2].Value.ToString();
-            abre.txtRg.Text = LinhaSelecionada.Cells[3].Value.ToString();
-            abre.txtCpf.Text = LinhaSelecionada.Cells[4].Value.ToString();
-            abre.txtNascimento.Text = LinhaSelecionada.Cells[5].Value.ToString();
-            abre.txtEmail.Text = LinhaSelecionada.Cells[6].Value.ToString();
-            abre.txtTelefone.Text = LinhaSelecionada.Cells[7].Value.ToString();
-            abre.txtCelular.Text = LinhaSelecionada.Cells[8].Value.ToString();
-            if(LinhaSelecionada.Cells[9].Value.ToString() == "Feminino")
-            {
-                abre.rdbFem.Select();
-            }
-            else
-            {
-                abre.rdbMasc.Select();
-            }
-            abre.txtImg.Text = LinhaSelecionada.Cells[10].Value.ToString();
-            abre.txtNumCasa.Text = LinhaSelecionada.Cells[12].Value.ToString();
-            abre.txtPais.Text = LinhaSelecionada.Cells[16].Value.ToString();
-            abre.Show();
-            
-        }
-
-        private void cadastrarFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ProcurarEndereco abre = new ProcurarEndereco();
-            abre.btnLocalizar.Visible = true;
-            abre.btnVerificar.Visible = false;
-            abre.Show();
-        }
-
-        private void listarFuncionarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lblCpfCliente.Visible = false;
-            txtCpfCliente.Visible = false;
-            btnListaClientes.Visible = false;
-            lblFuncionario.Visible = true;
-            txtCpfFun.Visible = true;
-            btnListFun.Visible = true;
+            CadastrarFuncionarios abre = new CadastrarFuncionarios();
+            abre.ShowDialog();
         }
     }
 }

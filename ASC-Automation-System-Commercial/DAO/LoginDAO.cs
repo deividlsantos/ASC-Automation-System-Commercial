@@ -58,5 +58,21 @@ namespace ASC_Automation_System_Commercial.DAO
 
             return resp;
         }
+            
+        public DataTable RetornaLocal()
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand cmd = CN.CreateCommand();
+
+             cmd.CommandText = "SELECT * FROM cargo ORDER BY descricao";
+
+             MySqlDataReader sqlDataReader = null;
+             sqlDataReader = cmd.ExecuteReader();
+
+             DataTable dataTable = new DataTable();
+
+             dataTable.Load(sqlDataReader);
+             return dataTable;
+        }
     }
 }

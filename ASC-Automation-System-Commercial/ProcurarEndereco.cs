@@ -28,7 +28,7 @@ namespace ASC_Automation_System_Commercial
 
         private void dgvEndereco_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (btnVerificar.Visible == true) { 
+            /*if (btnVerificar.Visible == true) { 
                 DataGridViewRow LinhaSelecionada;
                 LinhaSelecionada = dgvEndereco.CurrentRow;
                 CadastrarClientes abre = new CadastrarClientes();
@@ -45,7 +45,7 @@ namespace ASC_Automation_System_Commercial
                     abre.txtIdEndereco.Text = LinhaSelecionada.Cells[0].Value.ToString();
                     abre.Show();
                 }
-            }
+            }*/
         }
 
         private void btnLocalizar_Click(object sender, EventArgs e)
