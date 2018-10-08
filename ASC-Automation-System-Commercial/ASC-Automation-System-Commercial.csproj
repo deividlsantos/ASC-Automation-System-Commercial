@@ -49,32 +49,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastrarFuncionarios.cs">
+    <Compile Include="DAO\FornecedorDAO.cs" />
+    <Compile Include="DAO\ProdutoDAO.cs" />
+    <Compile Include="MODEL\Fornecedor.cs" />
+    <Compile Include="MODEL\Produto.cs" />
+    <Compile Include="Views\CadastrarFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastrarFuncionarios.Designer.cs">
+    <Compile Include="Views\CadastrarFuncionarios.Designer.cs">
       <DependentUpon>CadastrarFuncionarios.cs</DependentUpon>
     </Compile>
     <Compile Include="DAO\ClienteDAO.cs" />
     <Compile Include="DAO\EnderecoDAO.cs" />
     <Compile Include="DAO\LoginDAO.cs" />
-    <Compile Include="CadastrarClientes.cs">
+    <Compile Include="Views\CadastrarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CadastrarClientes.Designer.cs">
+    <Compile Include="Views\CadastrarClientes.Designer.cs">
       <DependentUpon>CadastrarClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="MODEL\Cargo.cs" />
-    <Compile Include="ProcurarEndereco.cs">
+    <Compile Include="Views\ProcurarEndereco.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProcurarEndereco.Designer.cs">
+    <Compile Include="Views\ProcurarEndereco.Designer.cs">
       <DependentUpon>ProcurarEndereco.cs</DependentUpon>
     </Compile>
-    <Compile Include="Load.cs">
+    <Compile Include="Views\Load.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Load.Designer.cs">
+    <Compile Include="Views\Load.Designer.cs">
       <DependentUpon>Load.cs</DependentUpon>
     </Compile>
     <Compile Include="MODEL\Cliente.cs" />
@@ -82,28 +86,40 @@
     <Compile Include="MODEL\Login.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TelaLogin.cs">
+    <Compile Include="Views\Produto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaLogin.Designer.cs">
+    <Compile Include="Views\Produto.Designer.cs">
+      <DependentUpon>Produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SelecionarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\SelecionarFornecedor.Designer.cs">
+      <DependentUpon>SelecionarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TelaLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TelaLogin.Designer.cs">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaPrincipal.cs">
+    <Compile Include="Views\TelaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaPrincipal.Designer.cs">
+    <Compile Include="Views\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CadastrarClientes.resx">
+    <EmbeddedResource Include="Views\CadastrarClientes.resx">
       <DependentUpon>CadastrarClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CadastrarFuncionarios.resx">
+    <EmbeddedResource Include="Views\CadastrarFuncionarios.resx">
       <DependentUpon>CadastrarFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProcurarEndereco.resx">
+    <EmbeddedResource Include="Views\ProcurarEndereco.resx">
       <DependentUpon>ProcurarEndereco.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Load.resx">
+    <EmbeddedResource Include="Views\Load.resx">
       <DependentUpon>Load.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -116,10 +132,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TelaLogin.resx">
+    <EmbeddedResource Include="Views\Produto.resx">
+      <DependentUpon>Produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SelecionarFornecedor.resx">
+      <DependentUpon>SelecionarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TelaLogin.resx">
       <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaPrincipal.resx">
+    <EmbeddedResource Include="Views\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -184,5 +206,6 @@
   <ItemGroup>
     <None Include="Resources\excluir.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

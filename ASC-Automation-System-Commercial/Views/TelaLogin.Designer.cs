@@ -29,99 +29,150 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnEntrar = new System.Windows.Forms.Button();
-            this.btnCnacelar = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnLogar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.listaCargo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ASC_Automation_System_Commercial.Properties.Resources.entrada;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 97);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Image = global::ASC_Automation_System_Commercial.Properties.Resources.cadeado;
+            this.pictureBox1.Location = new System.Drawing.Point(29, 74);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(340, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(222, 237);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // txtLogin
-            // 
-            this.txtLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLogin.Location = new System.Drawing.Point(122, 119);
-            this.txtLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtLogin.Name = "txtLogin";
-            this.txtLogin.Size = new System.Drawing.Size(214, 13);
-            this.txtLogin.TabIndex = 1;
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenha.Location = new System.Drawing.Point(122, 170);
-            this.txtSenha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.PasswordChar = '*';
-            this.txtSenha.Size = new System.Drawing.Size(214, 13);
-            this.txtSenha.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(136, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(277, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 39);
-            this.label1.TabIndex = 3;
+            this.label1.Size = new System.Drawing.Size(46, 16);
+            this.label1.TabIndex = 1;
             this.label1.Text = "Login";
             // 
-            // btnEntrar
+            // label2
             // 
-            this.btnEntrar.BackColor = System.Drawing.Color.Lime;
-            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEntrar.Location = new System.Drawing.Point(68, 234);
-            this.btnEntrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(93, 37);
-            this.btnEntrar.TabIndex = 4;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = false;
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(273, 185);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Senha";
             // 
-            // btnCnacelar
+            // txtLogin
             // 
-            this.btnCnacelar.BackColor = System.Drawing.Color.Red;
-            this.btnCnacelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCnacelar.Location = new System.Drawing.Point(197, 234);
-            this.btnCnacelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCnacelar.Name = "btnCnacelar";
-            this.btnCnacelar.Size = new System.Drawing.Size(93, 37);
-            this.btnCnacelar.TabIndex = 5;
-            this.btnCnacelar.Text = "Cancelar";
-            this.btnCnacelar.UseVisualStyleBackColor = false;
+            this.txtLogin.Location = new System.Drawing.Point(329, 147);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(237, 20);
+            this.txtLogin.TabIndex = 3;
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Location = new System.Drawing.Point(329, 185);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(237, 20);
+            this.txtSenha.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(271, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(105, 37);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Logar";
+            // 
+            // btnLogar
+            // 
+            this.btnLogar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogar.Location = new System.Drawing.Point(329, 231);
+            this.btnLogar.Name = "btnLogar";
+            this.btnLogar.Size = new System.Drawing.Size(75, 30);
+            this.btnLogar.TabIndex = 6;
+            this.btnLogar.Text = "Logar";
+            this.btnLogar.UseVisualStyleBackColor = true;
+            this.btnLogar.Click += new System.EventHandler(this.btnLogar_Click);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(410, 231);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 30);
+            this.btnLimpar.TabIndex = 7;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(491, 231);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(75, 30);
+            this.btnSair.TabIndex = 8;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(277, 84);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 16);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Nivel de Acesso";
+            // 
+            // listaCargo
+            // 
+            this.listaCargo.FormattingEnabled = true;
+            this.listaCargo.Location = new System.Drawing.Point(405, 84);
+            this.listaCargo.Name = "listaCargo";
+            this.listaCargo.Size = new System.Drawing.Size(161, 21);
+            this.listaCargo.TabIndex = 10;
+            this.listaCargo.SelectedIndexChanged += new System.EventHandler(this.listaCargo_SelectedIndexChanged);
             // 
             // TelaLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(374, 331);
-            this.Controls.Add(this.btnCnacelar);
-            this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.label1);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(636, 394);
+            this.Controls.Add(this.listaCargo);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnLogar);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TelaLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaLogin";
-            this.Load += new System.EventHandler(this.TelaLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -131,10 +182,15 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnEntrar;
-        private System.Windows.Forms.Button btnCnacelar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnLogar;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox listaCargo;
     }
 }
