@@ -18,9 +18,21 @@ namespace ASC_Automation_System_Commercial
             InitializeComponent();
         }
 
-        private void btnMproduto_Click(object sender, EventArgs e)
+        private void btnCadasClien_Click(object sender, EventArgs e)
         {
-            Cadastro_Produto abre = new Cadastro_Produto();
+            CadastrarClientes abre = new CadastrarClientes();
+            abre.ShowDialog();
+        }
+
+        private void btnCadasFunc_Click(object sender, EventArgs e)
+        {
+            CadastrarFuncionarios abre = new CadastrarFuncionarios();
+            abre.ShowDialog();
+        }
+
+        private void btnProduto_Click(object sender, EventArgs e)
+        {
+            Produto abre = new Produto();
             abre.ShowDialog();
         }
     }

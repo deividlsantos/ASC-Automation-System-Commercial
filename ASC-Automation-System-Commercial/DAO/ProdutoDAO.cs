@@ -11,33 +11,93 @@ namespace ASC_Automation_System_Commercial.DAO
 {
     class ProdutoDAO
     {
-
-        
         String Con;
-        Produto cad = new Produto();
 
         public ProdutoDAO()
         {
             Con = "Persist Security Info=False;server=localhost;database=automationcommercial;uid=root;pwd=root";
         }
 
-        public void produto(Produto produto)
+        public void CadastrarProduto(Produto produto)
         {
-            
-            
             MySqlConnection CN = new MySqlConnection(Con);
             MySqlCommand Com = CN.CreateCommand();
 
-            Com.CommandText = "INSERT INTO  produto (tipo, id_fornecedor_fk, fabricante, modelo, cor, preco, quantidade) values(?tipo,?id_fornecedor_fk,?fabricante,?modelo,?cor,?preco,?quantidade)";
-
+            Com.CommandText = "INSERT INTO  produto (id_fornecedor_fk, fabricante, tipo, modelo, cor, preco, quantidade) values(?id_fornecedor_fk,?tipo,?fabricante,?tipo,?modelo,?cor,?preco,?quantidade)";
             
-            Com.Parameters.AddWithValue("?tipo", produto.Tipo);
             Com.Parameters.AddWithValue("?id_fornecedor_fk", produto.Id_fornecedor_fk);
             Com.Parameters.AddWithValue("?fabricante", produto.Fabricante);
+            Com.Parameters.AddWithValue("?tipo", produto.Tipo);
             Com.Parameters.AddWithValue("?modelo", produto.Modelo);
             Com.Parameters.AddWithValue("?cor", produto.Cor);
             Com.Parameters.AddWithValue("?preco", produto.Preco);
             Com.Parameters.AddWithValue("?quantidade", produto.Quantidade);
+            try
+            {
+                CN.Open();
+                int registroAfetados = Com.ExecuteNonQuery();
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
+        public void AlterarProduto(Produto produto)
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand Com = CN.CreateCommand();
+
+            Com.CommandText = "UPDATE produto SET id_fornecedor_fk='" + produto.Id_fornecedor_fk + "'" + "," + "fabricante='" + produto.Fabricante + "'" + "," + "tipo='" + produto.Tipo + "'" + "," + " modelo='" + produto.Modelo + "'" + "," + "cor='" + produto.Cor + "'" + "," + "preco='" + produto.Preco + "'" + "," + "quantidade='" + produto.Quantidade + "'" + " WHERE " + "codigo_produto=" + produto.Codigo_produto;
+            try
+            {
+                CN.Open();
+                int registrosAfetados = Com.ExecuteNonQuery();
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
+        public DataTable getProduto()
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand Com = CN.CreateCommand();
+            MySqlDataAdapter da;
+            Com.CommandText = "SELECT * FROM produto";
+
+            try
+            {
+                CN.Open();
+                Com = new MySqlCommand(Com.CommandText, CN);
+                da = new MySqlDataAdapter(Com);
+
+                DataTable dtProduto = new DataTable();
+                da.Fill(dtProduto);
+                return dtProduto;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
+        public void DeletarProduto(Produto produto)
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand Com = CN.CreateCommand();
+
+            Com.CommandText = "DELETE FROM produto WHERE codigo_produto=" + produto.Codigo_produto;
+
             try
             {
                 CN.Open();

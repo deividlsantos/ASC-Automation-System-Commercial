@@ -37,10 +37,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::ASC_Automation_System_Commercial.Properties.Resources.load;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(487, 299);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -56,7 +57,7 @@
             // loadBar
             // 
             this.loadBar.Location = new System.Drawing.Point(9, 279);
-            this.loadBar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.loadBar.Margin = new System.Windows.Forms.Padding(2);
             this.loadBar.Name = "loadBar";
             this.loadBar.Size = new System.Drawing.Size(469, 12);
             this.loadBar.TabIndex = 1;
@@ -69,7 +70,7 @@
             this.Controls.Add(this.loadBar);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Load";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

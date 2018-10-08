@@ -1,5 +1,4 @@
-﻿using ASC_Automation_System_Commercial.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,8 +28,8 @@ namespace ASC_Automation_System_Commercial
                 timerLoader.Enabled = false;
                 this.Hide();
 
-                TelaLogin abre = new TelaLogin();
-                    abre.ShowDialog();
+                TelaPrincipal abre = new TelaPrincipal();
+                abre.ShowDialog();
             }
 
         }
