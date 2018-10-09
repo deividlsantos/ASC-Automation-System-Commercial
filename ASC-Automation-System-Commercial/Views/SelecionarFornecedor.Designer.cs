@@ -37,6 +37,7 @@
             this.dgvFornecedor.AllowUserToAddRows = false;
             this.dgvFornecedor.AllowUserToDeleteRows = false;
             this.dgvFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvFornecedor.Location = new System.Drawing.Point(12, 12);
             this.dgvFornecedor.Name = "dgvFornecedor";
             this.dgvFornecedor.ReadOnly = true;
@@ -52,6 +53,7 @@
             this.ClientSize = new System.Drawing.Size(422, 176);
             this.Controls.Add(this.dgvFornecedor);
             this.Name = "SelecionarFornecedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SelecionarFornecedor";
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).EndInit();
             this.ResumeLayout(false);

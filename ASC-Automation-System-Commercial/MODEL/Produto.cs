@@ -12,9 +12,9 @@ namespace ASC_Automation_System_Commercial.MODEL
 
         private int id_fornecedor_fk;
 
-        private String tipo;
-
         private String fabricante;
+
+        private String tipo;
 
         private String modelo;
 
@@ -26,8 +26,8 @@ namespace ASC_Automation_System_Commercial.MODEL
 
         public int Codigo_produto { get => codigo_produto; set => codigo_produto = value; }
         public int Id_fornecedor_fk { get => id_fornecedor_fk; set => id_fornecedor_fk = value; }
-        public string Tipo { get => tipo; set => tipo = value; }
         public string Fabricante { get => fabricante; set => fabricante = value; }
+        public string Tipo { get => tipo; set => tipo = value; }
         public string Modelo { get => modelo; set => modelo = value; }
         public string Cor { get => cor; set => cor = value; }
         public double Preco { get => preco; set => preco = value; }
@@ -38,11 +38,11 @@ namespace ASC_Automation_System_Commercial.MODEL
 
         }
 
-        public Produto(int id_fornecedor_fk, string tipo, string fabricante, string modelo, string cor, double preco, int quantidade)
+        public Produto(int id_fornecedor_fk, string fabricante, string tipo, string modelo, string cor, double preco, int quantidade)
         {
             this.id_fornecedor_fk = id_fornecedor_fk;
-            this.Tipo = tipo;
             this.Fabricante = fabricante;
+            this.Tipo = tipo;
             this.Modelo = modelo;
             this.Cor = cor;
             this.Preco = preco;

@@ -18,7 +18,7 @@ namespace ASC_Automation_System_Commercial.Views
             InitializeComponent();
         }
 
-        private void habilitarcampos()
+        public void habilitarcampos()
         {
             btnFornecedor.Enabled = true;
             txtFabricante.Enabled = true;
@@ -73,19 +73,27 @@ namespace ASC_Automation_System_Commercial.Views
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ProdutoDAO produtoBD = new ProdutoDAO();
-                MODEL.Produto produtoReg = new MODEL.Produto(int.Parse(txtFornecedor.Text), txtFabricante.Text, cboTipo.Text, txtModelo.Text, txtCor.Text, Double.Parse(txtPreco.Text), int.Parse(txtQuantidade.Text));
-
-                produtoBD.CadastrarProduto(produtoReg);
-                MessageBox.Show("Produto Cadastrado");
-                limparcampos();
-                dgvProduto.DataSource = produtoBD.getProduto();
-            }
-            catch (Exception)
+            if (txtFornecedor.Text == "" || txtFabricante.Text == "" || cboTipo.Text == "" || txtModelo.Text == "" || txtCor.Text == "" || txtPreco.Text == "")
             {
                 MessageBox.Show("Todos os campos devem estar preenchidos corretamente!");
+            }
+            else
+            {
+                try
+                {
+                    ProdutoDAO produtoBD = new ProdutoDAO();
+                    MODEL.Produto produtoReg = new MODEL.Produto(int.Parse(txtFornecedor.Text), txtFabricante.Text, cboTipo.Text, txtModelo.Text, txtCor.Text, Double.Parse(txtPreco.Text), int.Parse(txtQuantidade.Text));
+
+                    produtoBD.CadastrarProduto(produtoReg);
+                    MessageBox.Show("Produto Cadastrado");
+                    limparcampos();
+                    dgvProduto.DataSource = produtoBD.getProduto();
+                }
+                
+                catch (Exception)
+                {
+                    MessageBox.Show("Todos os campos devem estar preenchidos corretamente!");
+                }
             }
         }
 
@@ -101,43 +109,57 @@ namespace ASC_Automation_System_Commercial.Views
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ProdutoDAO produtoBD = new ProdutoDAO();
-                MODEL.Produto produtoReg = new MODEL.Produto(int.Parse(txtcProduto.Text), int.Parse(txtFornecedor.Text), cboTipo.Text, txtFabricante.Text, txtModelo.Text, txtCor.Text, Double.Parse(txtPreco.Text), int.Parse(txtQuantidade.Text));
-
-                produtoBD.AlterarProduto(produtoReg);
-                desabilitarcampos();
-                desabilitarbtns();
-                btnAlterar.Enabled = false;
-                MessageBox.Show("Produto Alterado");
-                limparcampos();
-                dgvProduto.DataSource = produtoBD.getProduto();
-            }
-            catch (Exception)
+            if (txtFornecedor.Text == "" || txtFabricante.Text == "" || cboTipo.Text == "" || txtModelo.Text == "" || txtCor.Text == "" || txtPreco.Text == "" || txtQuantidade.Text == "")
             {
                 MessageBox.Show("Todos os campos devem estar preenchidos corretamente!");
+            }
+            else
+            {
+                try
+                {
+                    ProdutoDAO produtoBD = new ProdutoDAO();
+                    MODEL.Produto produtoReg = new MODEL.Produto(int.Parse(txtcProduto.Text), int.Parse(txtFornecedor.Text), txtFabricante.Text, cboTipo.Text, txtModelo.Text, txtCor.Text, Double.Parse(txtPreco.Text), int.Parse(txtQuantidade.Text));
+
+                    produtoBD.AlterarProduto(produtoReg);
+                    desabilitarcampos();
+                    desabilitarbtns();
+                    btnAlterar.Enabled = false;
+                    MessageBox.Show("Produto Alterado");
+                    limparcampos();
+                    dgvProduto.DataSource = produtoBD.getProduto();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Todos os campos devem estar preenchidos corretamente!");
+                }
             }
         }
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ProdutoDAO produtoBD = new ProdutoDAO();
-                MODEL.Produto produtoReg = new MODEL.Produto(int.Parse(txtcProduto.Text), int.Parse(txtFornecedor.Text), cboTipo.Text, txtFabricante.Text, txtModelo.Text, txtCor.Text, Double.Parse(txtPreco.Text), int.Parse(txtQuantidade.Text));
-
-                produtoBD.DeletarProduto(produtoReg);
-                desabilitarcampos();
-                desabilitarbtns();
-                btnAlterar.Enabled = false;
-                MessageBox.Show("Produto Deletado");
-                limparcampos();
-                dgvProduto.DataSource = produtoBD.getProduto();
-            }
-            catch (Exception)
+            if (txtFornecedor.Text == "" || txtFabricante.Text == "" || cboTipo.Text == "" || txtModelo.Text == "" || txtCor.Text == "" || txtPreco.Text == "")
             {
                 MessageBox.Show("Todos os campos devem estar preenchidos corretamente!");
+            }
+            else
+            {
+                try
+                {
+                    ProdutoDAO produtoBD = new ProdutoDAO();
+                    MODEL.Produto produtoReg = new MODEL.Produto(int.Parse(txtcProduto.Text), int.Parse(txtFornecedor.Text), txtFabricante.Text, cboTipo.Text, txtModelo.Text, txtCor.Text, Double.Parse(txtPreco.Text), int.Parse(txtQuantidade.Text));
+
+                    produtoBD.DeletarProduto(produtoReg);
+                    desabilitarcampos();
+                    desabilitarbtns();
+                    btnAlterar.Enabled = false;
+                    MessageBox.Show("Produto Deletado");
+                    limparcampos();
+                    dgvProduto.DataSource = produtoBD.getProduto();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Todos os campos devem estar preenchidos corretamente!");
+                }
             }
         }
 
@@ -170,8 +192,8 @@ namespace ASC_Automation_System_Commercial.Views
             LinhaSelecionada = dgvProduto.CurrentRow;
             txtcProduto.Text = LinhaSelecionada.Cells[0].Value.ToString();
             txtFornecedor.Text = LinhaSelecionada.Cells[1].Value.ToString();
-            cboTipo.Text = LinhaSelecionada.Cells[2].Value.ToString();
-            txtFabricante.Text = LinhaSelecionada.Cells[3].Value.ToString();
+            txtFabricante.Text = LinhaSelecionada.Cells[2].Value.ToString();
+            cboTipo.Text = LinhaSelecionada.Cells[3].Value.ToString();
             txtModelo.Text = LinhaSelecionada.Cells[4].Value.ToString();
             txtCor.Text = LinhaSelecionada.Cells[5].Value.ToString();
             txtPreco.Text = LinhaSelecionada.Cells[6].Value.ToString();

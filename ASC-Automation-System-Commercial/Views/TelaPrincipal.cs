@@ -33,7 +33,7 @@ namespace ASC_Automation_System_Commercial
         private void btnProduto_Click(object sender, EventArgs e)
         {
             Produto abre = new Produto();
-            abre.ShowDialog();
+            abre.Show();
         }
     }
 }
