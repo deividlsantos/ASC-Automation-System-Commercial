@@ -23,9 +23,12 @@ namespace ASC_Automation_System_Commercial.Views
             LinhaSelecionada = dgvFornecedor.CurrentRow;
 
             Produto abre = new Produto();
-            abre.txtFornecedor.Text = LinhaSelecionada.Cells[2].Value.ToString();
-            this.Close();
+            abre.txtFornecedor.Text = LinhaSelecionada.Cells[0].Value.ToString();
+            abre.habilitarcampos();
+            abre.btnQuantidade.Enabled = true;
+            abre.btnCadastrar.Enabled = true;
             abre.Show();
+            this.Close();
         }
     }
 }

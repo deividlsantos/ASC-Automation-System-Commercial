@@ -24,7 +24,7 @@ namespace ASC_Automation_System_Commercial.DAO
             MySqlConnection CN = new MySqlConnection(Con);
             MySqlCommand Com = CN.CreateCommand();
             MySqlDataAdapter da;
-            Com.CommandText = "SELECT cnpj, razao_social, nome_fantasia FROM fornecedor";
+            Com.CommandText = "SELECT * FROM fornecedor";
 
             try
             {

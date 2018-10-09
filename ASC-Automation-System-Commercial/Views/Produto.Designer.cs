@@ -61,6 +61,7 @@
             this.dgvProduto.AllowUserToAddRows = false;
             this.dgvProduto.AllowUserToDeleteRows = false;
             this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvProduto.Location = new System.Drawing.Point(235, 21);
             this.dgvProduto.Name = "dgvProduto";
             this.dgvProduto.ReadOnly = true;
@@ -116,9 +117,10 @@
             // 
             this.txtFabricante.Enabled = false;
             this.txtFabricante.Location = new System.Drawing.Point(112, 131);
+            this.txtFabricante.MaxLength = 60;
             this.txtFabricante.Name = "txtFabricante";
             this.txtFabricante.Size = new System.Drawing.Size(100, 20);
-            this.txtFabricante.TabIndex = 6;
+            this.txtFabricante.TabIndex = 3;
             // 
             // label4
             // 
@@ -131,12 +133,24 @@
             // 
             // cboTipo
             // 
+            this.cboTipo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboTipo.Enabled = false;
             this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Items.AddRange(new object[] {
+            "POWER BANK",
+            "MONITOR",
+            "MOUSE",
+            "NOTEBOOK",
+            "SMART PHONE",
+            "SMART TV",
+            "ROTEADOR",
+            "TABLET",
+            "TECLADO",
+            "NOBREAK"});
             this.cboTipo.Location = new System.Drawing.Point(91, 172);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(121, 21);
-            this.cboTipo.TabIndex = 8;
+            this.cboTipo.TabIndex = 4;
             this.cboTipo.Text = "Selecione";
             // 
             // label5
@@ -152,9 +166,10 @@
             // 
             this.txtModelo.Enabled = false;
             this.txtModelo.Location = new System.Drawing.Point(112, 225);
+            this.txtModelo.MaxLength = 60;
             this.txtModelo.Name = "txtModelo";
             this.txtModelo.Size = new System.Drawing.Size(100, 20);
-            this.txtModelo.TabIndex = 10;
+            this.txtModelo.TabIndex = 5;
             // 
             // label6
             // 
@@ -170,9 +185,10 @@
             // 
             this.txtPreco.Enabled = false;
             this.txtPreco.Location = new System.Drawing.Point(112, 290);
+            this.txtPreco.MaxLength = 8;
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(100, 20);
-            this.txtPreco.TabIndex = 12;
+            this.txtPreco.TabIndex = 7;
             // 
             // label7
             // 
@@ -187,9 +203,11 @@
             // 
             this.txtQuantidade.Enabled = false;
             this.txtQuantidade.Location = new System.Drawing.Point(112, 325);
+            this.txtQuantidade.MaxLength = 5;
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(100, 20);
-            this.txtQuantidade.TabIndex = 14;
+            this.txtQuantidade.TabIndex = 9;
+            this.txtQuantidade.Text = "0";
             // 
             // btnFornecedor
             // 
@@ -198,7 +216,7 @@
             this.btnFornecedor.Location = new System.Drawing.Point(114, 87);
             this.btnFornecedor.Name = "btnFornecedor";
             this.btnFornecedor.Size = new System.Drawing.Size(100, 38);
-            this.btnFornecedor.TabIndex = 15;
+            this.btnFornecedor.TabIndex = 2;
             this.btnFornecedor.Text = "Selecionar Fornecedor";
             this.btnFornecedor.UseVisualStyleBackColor = true;
             this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
@@ -210,7 +228,7 @@
             this.btnQuantidade.Location = new System.Drawing.Point(112, 360);
             this.btnQuantidade.Name = "btnQuantidade";
             this.btnQuantidade.Size = new System.Drawing.Size(100, 38);
-            this.btnQuantidade.TabIndex = 16;
+            this.btnQuantidade.TabIndex = 8;
             this.btnQuantidade.Text = "Adicionar/Alterar Quantidade";
             this.btnQuantidade.UseVisualStyleBackColor = true;
             this.btnQuantidade.Click += new System.EventHandler(this.btnQuantidade_Click);
@@ -221,7 +239,7 @@
             this.btnNProduto.Location = new System.Drawing.Point(12, 438);
             this.btnNProduto.Name = "btnNProduto";
             this.btnNProduto.Size = new System.Drawing.Size(100, 38);
-            this.btnNProduto.TabIndex = 17;
+            this.btnNProduto.TabIndex = 1;
             this.btnNProduto.Text = "Cadastrar Novo Produto";
             this.btnNProduto.UseVisualStyleBackColor = true;
             this.btnNProduto.Click += new System.EventHandler(this.btnNProduto_Click);
@@ -233,7 +251,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(114, 438);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(100, 38);
-            this.btnCadastrar.TabIndex = 18;
+            this.btnCadastrar.TabIndex = 10;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
@@ -244,7 +262,7 @@
             this.btnSelecionar.Location = new System.Drawing.Point(220, 438);
             this.btnSelecionar.Name = "btnSelecionar";
             this.btnSelecionar.Size = new System.Drawing.Size(100, 38);
-            this.btnSelecionar.TabIndex = 19;
+            this.btnSelecionar.TabIndex = 11;
             this.btnSelecionar.Text = "Selecionar";
             this.btnSelecionar.UseVisualStyleBackColor = true;
             this.btnSelecionar.Click += new System.EventHandler(this.btnSelecionar_Click);
@@ -256,7 +274,7 @@
             this.btnAlterar.Location = new System.Drawing.Point(326, 438);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(100, 38);
-            this.btnAlterar.TabIndex = 20;
+            this.btnAlterar.TabIndex = 12;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
@@ -268,7 +286,7 @@
             this.btnDeletar.Location = new System.Drawing.Point(432, 438);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(100, 38);
-            this.btnDeletar.TabIndex = 21;
+            this.btnDeletar.TabIndex = 13;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
@@ -279,7 +297,7 @@
             this.btnLimpar.Location = new System.Drawing.Point(538, 438);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(100, 38);
-            this.btnLimpar.TabIndex = 22;
+            this.btnLimpar.TabIndex = 14;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
@@ -297,9 +315,10 @@
             // 
             this.txtCor.Enabled = false;
             this.txtCor.Location = new System.Drawing.Point(112, 258);
+            this.txtCor.MaxLength = 20;
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(100, 20);
-            this.txtCor.TabIndex = 24;
+            this.txtCor.TabIndex = 6;
             // 
             // Produto
             // 
@@ -332,6 +351,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvProduto);
             this.Name = "Produto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Produto";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.ResumeLayout(false);
@@ -356,9 +376,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Button btnFornecedor;
-        private System.Windows.Forms.Button btnQuantidade;
         private System.Windows.Forms.Button btnNProduto;
-        private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnSelecionar;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnDeletar;
@@ -366,5 +384,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtCor;
         public System.Windows.Forms.TextBox txtFornecedor;
+        public System.Windows.Forms.Button btnQuantidade;
+        public System.Windows.Forms.Button btnCadastrar;
     }
 }

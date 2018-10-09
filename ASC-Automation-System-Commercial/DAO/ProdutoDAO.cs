@@ -23,7 +23,7 @@ namespace ASC_Automation_System_Commercial.DAO
             MySqlConnection CN = new MySqlConnection(Con);
             MySqlCommand Com = CN.CreateCommand();
 
-            Com.CommandText = "INSERT INTO  produto (id_fornecedor_fk, fabricante, tipo, modelo, cor, preco, quantidade) values(?id_fornecedor_fk,?tipo,?fabricante,?tipo,?modelo,?cor,?preco,?quantidade)";
+            Com.CommandText = "INSERT INTO  produto (id_fornecedor_fk,fabricante,tipo,modelo,cor,preco,quantidade) values(?id_fornecedor_fk,?fabricante,?tipo,?modelo,?cor,?preco,?quantidade)";
             
             Com.Parameters.AddWithValue("?id_fornecedor_fk", produto.Id_fornecedor_fk);
             Com.Parameters.AddWithValue("?fabricante", produto.Fabricante);
