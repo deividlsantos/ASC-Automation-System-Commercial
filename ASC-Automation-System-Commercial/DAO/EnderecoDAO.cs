@@ -26,25 +26,15 @@ namespace ASC_Automation_System_Commercial.DAO
             MySqlCommand cmd = CN.CreateCommand();
             MySqlDataAdapter da;
 
-            //cmd.CommandText = "SELECT id, nome, endereco, idade FROM Alunos WHERE " + filtro + " LIKE '%" + nome + "%' order by nome"
-            cmd.CommandText = "select id_endereco, logradouro, bairro, cidade, estado from endereco where " + pesquisa + " like '%" + cep + "%'";
-
+            cmd.CommandText = "SELECT * FROM endereco where " + pesquisa + " like '%" + cep + "%'";
             try
             {
                 CN.Open();
                 cmd = new MySqlCommand(cmd.CommandText, CN);
                 da = new MySqlDataAdapter(cmd);
-
-                DataTable dtVistar = new DataTable();
-                da.Fill(dtVistar);
-                return dtVistar;
-                //CN.Open();
-                //cmd = new MySqlCommand(cmd.CommandText, CN);
-                //da = new MySqlDataAdapter(cmd);
-
-                //DataTable dtAlunos = new DataTable();
-                //da.Fill(dtAlunos);
-                //return dtAlunos;
+                DataTable dtendereco = new DataTable();
+                da.Fill(dtendereco);
+                return dtendereco;
             }
             catch (MySqlException ex)
             {

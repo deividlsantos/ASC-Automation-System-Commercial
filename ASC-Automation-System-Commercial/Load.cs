@@ -29,7 +29,7 @@ namespace ASC_Automation_System_Commercial
                 this.Hide();
 
                 TelaLogin abre = new TelaLogin();
-                abre.ShowDialog();
+                abre.Show();
             }
 
         }

@@ -64,7 +64,7 @@
     <Compile Include="CadastrarClientes.Designer.cs">
       <DependentUpon>CadastrarClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="MODEL\Cargo.cs" />
+    <Compile Include="MODEL\Funcionario.cs" />
     <Compile Include="ProcurarEndereco.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +183,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verificar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

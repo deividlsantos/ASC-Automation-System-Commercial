@@ -20,13 +20,13 @@ namespace ASC_Automation_System_Commercial
         private void btnCadasClien_Click(object sender, EventArgs e)
         {
             CadastrarClientes abre = new CadastrarClientes();
-            abre.ShowDialog();
+            abre.Show();
         }
 
         private void btnCadasFunc_Click(object sender, EventArgs e)
         {
             CadastrarFuncionarios abre = new CadastrarFuncionarios();
-            abre.ShowDialog();
+            abre.Show();
         }
     }
 }

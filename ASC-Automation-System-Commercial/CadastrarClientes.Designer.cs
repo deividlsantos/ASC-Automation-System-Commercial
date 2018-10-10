@@ -33,49 +33,49 @@
             this.errorEmail = new System.Windows.Forms.ErrorProvider(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtRg = new System.Windows.Forms.MaskedTextBox();
+            this.cmbSexo = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtDataNasc = new System.Windows.Forms.MaskedTextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.dgvListarClientes = new System.Windows.Forms.DataGridView();
+            this.txtPais = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.btnVerificar = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovoCliente = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
+            this.txtCep = new System.Windows.Forms.TextBox();
+            this.txtFiltro = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -106,30 +106,23 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "Nome";
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(133, 287);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(798, 22);
-            this.textBox1.TabIndex = 7;
+            this.txtNome.Enabled = false;
+            this.txtNome.Location = new System.Drawing.Point(133, 287);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(798, 22);
+            this.txtNome.TabIndex = 7;
             // 
-            // maskedTextBox1
+            // txtCpf
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(133, 340);
-            this.maskedTextBox1.Mask = "000.000.000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(162, 22);
-            this.maskedTextBox1.TabIndex = 8;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(133, 93);
-            this.maskedTextBox2.Mask = "00.000-000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(107, 22);
-            this.maskedTextBox2.TabIndex = 9;
-            this.maskedTextBox2.ValidatingType = typeof(System.DateTime);
+            this.txtCpf.Enabled = false;
+            this.txtCpf.Location = new System.Drawing.Point(133, 340);
+            this.txtCpf.Mask = "000.000.000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(162, 22);
+            this.txtCpf.TabIndex = 8;
+            this.txtCpf.ValidatingType = typeof(System.DateTime);
             // 
             // label3
             // 
@@ -151,12 +144,13 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Logradouro";
             // 
-            // textBox2
+            // txtLogradouro
             // 
-            this.textBox2.Location = new System.Drawing.Point(133, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(540, 22);
-            this.textBox2.TabIndex = 12;
+            this.txtLogradouro.Enabled = false;
+            this.txtLogradouro.Location = new System.Drawing.Point(133, 152);
+            this.txtLogradouro.Name = "txtLogradouro";
+            this.txtLogradouro.Size = new System.Drawing.Size(540, 22);
+            this.txtLogradouro.TabIndex = 1;
             // 
             // label5
             // 
@@ -168,19 +162,21 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Bairro";
             // 
-            // textBox3
+            // txtBairro
             // 
-            this.textBox3.Location = new System.Drawing.Point(133, 211);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(247, 22);
-            this.textBox3.TabIndex = 14;
+            this.txtBairro.Enabled = false;
+            this.txtBairro.Location = new System.Drawing.Point(133, 211);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(247, 22);
+            this.txtBairro.TabIndex = 3;
             // 
-            // textBox4
+            // txtCidade
             // 
-            this.textBox4.Location = new System.Drawing.Point(396, 211);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(277, 22);
-            this.textBox4.TabIndex = 16;
+            this.txtCidade.Enabled = false;
+            this.txtCidade.Location = new System.Drawing.Point(396, 211);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(216, 22);
+            this.txtCidade.TabIndex = 4;
             // 
             // label6
             // 
@@ -192,12 +188,13 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Cidade";
             // 
-            // textBox5
+            // txtNumero
             // 
-            this.textBox5.Location = new System.Drawing.Point(686, 152);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(133, 22);
-            this.textBox5.TabIndex = 18;
+            this.txtNumero.Enabled = false;
+            this.txtNumero.Location = new System.Drawing.Point(686, 152);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(133, 22);
+            this.txtNumero.TabIndex = 2;
             // 
             // label7
             // 
@@ -213,19 +210,48 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(689, 187);
+            this.label8.Location = new System.Drawing.Point(627, 183);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 20);
             this.label8.TabIndex = 19;
             this.label8.Text = "Estado";
             // 
-            // comboBox1
+            // cmbEstado
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(693, 207);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 20;
+            this.cmbEstado.Enabled = false;
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Acre",
+            "Alagoas",
+            "Amapá",
+            "Amazonas",
+            "Bahia",
+            "Ceará",
+            "Distrito Federal",
+            "Espírito Santo",
+            "Goiás",
+            "Maranhão",
+            "Mato Grosso",
+            "Mato Grosso do Sul",
+            "Minas Gerais",
+            "Pará",
+            "Paraíba",
+            "Paraná",
+            "Pernambuco",
+            "Piauí",
+            "Rio de Janeiro",
+            "Rio Grande do Norte",
+            "Rio Grande do Sul",
+            "Rondônia",
+            "Roraima",
+            "Santa Catarina",
+            "São Paulo",
+            "Sergipe",
+            "Tocantins"});
+            this.cmbEstado.Location = new System.Drawing.Point(631, 209);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(121, 24);
+            this.cmbEstado.TabIndex = 5;
             // 
             // label9
             // 
@@ -247,31 +273,33 @@
             this.label10.TabIndex = 23;
             this.label10.Text = "RG";
             // 
-            // maskedTextBox3
+            // txtRg
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(348, 340);
-            this.maskedTextBox3.Mask = "00.000.000-0";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(162, 22);
-            this.maskedTextBox3.TabIndex = 22;
-            this.maskedTextBox3.ValidatingType = typeof(System.DateTime);
+            this.txtRg.Enabled = false;
+            this.txtRg.Location = new System.Drawing.Point(348, 340);
+            this.txtRg.Mask = "00.000.000-0";
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(162, 22);
+            this.txtRg.TabIndex = 9;
+            this.txtRg.ValidatingType = typeof(System.DateTime);
             // 
-            // comboBox2
+            // cmbSexo
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbSexo.Enabled = false;
+            this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.comboBox2.Location = new System.Drawing.Point(768, 332);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 25;
+            this.cmbSexo.Location = new System.Drawing.Point(768, 340);
+            this.cmbSexo.Name = "cmbSexo";
+            this.cmbSexo.Size = new System.Drawing.Size(121, 24);
+            this.cmbSexo.TabIndex = 11;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(764, 312);
+            this.label11.Location = new System.Drawing.Point(764, 314);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(50, 20);
             this.label11.TabIndex = 24;
@@ -287,23 +315,25 @@
             this.label12.TabIndex = 26;
             this.label12.Text = "Telefone Fixo";
             // 
-            // maskedTextBox4
+            // txtTelefone
             // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(133, 397);
-            this.maskedTextBox4.Mask = "(00) 0000-0000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(162, 22);
-            this.maskedTextBox4.TabIndex = 27;
-            this.maskedTextBox4.ValidatingType = typeof(System.DateTime);
+            this.txtTelefone.Enabled = false;
+            this.txtTelefone.Location = new System.Drawing.Point(133, 397);
+            this.txtTelefone.Mask = "(00) 0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(162, 22);
+            this.txtTelefone.TabIndex = 12;
+            this.txtTelefone.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox5
+            // txtCelular
             // 
-            this.maskedTextBox5.Location = new System.Drawing.Point(348, 397);
-            this.maskedTextBox5.Mask = "(00) 00000-0000";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(162, 22);
-            this.maskedTextBox5.TabIndex = 29;
-            this.maskedTextBox5.ValidatingType = typeof(System.DateTime);
+            this.txtCelular.Enabled = false;
+            this.txtCelular.Location = new System.Drawing.Point(348, 397);
+            this.txtCelular.Mask = "(00) 00000-0000";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(162, 22);
+            this.txtCelular.TabIndex = 13;
+            this.txtCelular.ValidatingType = typeof(System.DateTime);
             // 
             // label13
             // 
@@ -311,9 +341,9 @@
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(344, 374);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(122, 20);
+            this.label13.Size = new System.Drawing.Size(69, 20);
             this.label13.TabIndex = 28;
-            this.label13.Text = "Telefone Fixo";
+            this.label13.Text = "Celular";
             // 
             // label14
             // 
@@ -325,21 +355,23 @@
             this.label14.TabIndex = 31;
             this.label14.Text = "Data de Nascimento";
             // 
-            // maskedTextBox6
+            // txtDataNasc
             // 
-            this.maskedTextBox6.Location = new System.Drawing.Point(538, 340);
-            this.maskedTextBox6.Mask = "00/00/0000";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(176, 22);
-            this.maskedTextBox6.TabIndex = 30;
-            this.maskedTextBox6.ValidatingType = typeof(System.DateTime);
+            this.txtDataNasc.Enabled = false;
+            this.txtDataNasc.Location = new System.Drawing.Point(538, 340);
+            this.txtDataNasc.Mask = "00/00/0000";
+            this.txtDataNasc.Name = "txtDataNasc";
+            this.txtDataNasc.Size = new System.Drawing.Size(176, 22);
+            this.txtDataNasc.TabIndex = 10;
+            this.txtDataNasc.ValidatingType = typeof(System.DateTime);
             // 
-            // textBox6
+            // txtEmail
             // 
-            this.textBox6.Location = new System.Drawing.Point(538, 402);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(371, 22);
-            this.textBox6.TabIndex = 33;
+            this.txtEmail.Enabled = false;
+            this.txtEmail.Location = new System.Drawing.Point(538, 402);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(371, 22);
+            this.txtEmail.TabIndex = 14;
             // 
             // label15
             // 
@@ -351,35 +383,24 @@
             this.label15.TabIndex = 32;
             this.label15.Text = "E-mail";
             // 
-            // textBox8
+            // txtIdCliente
             // 
-            this.textBox8.Location = new System.Drawing.Point(260, 93);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(133, 22);
-            this.textBox8.TabIndex = 37;
-            this.textBox8.Visible = false;
+            this.txtIdCliente.Location = new System.Drawing.Point(321, 93);
+            this.txtIdCliente.Name = "txtIdCliente";
+            this.txtIdCliente.Size = new System.Drawing.Size(133, 22);
+            this.txtIdCliente.TabIndex = 37;
+            this.txtIdCliente.Visible = false;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(256, 67);
+            this.label17.Location = new System.Drawing.Point(317, 67);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(89, 20);
             this.label17.TabIndex = 36;
             this.label17.Text = "Id Cliente";
             this.label17.Visible = false;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Codigo",
-            "Cpf"});
-            this.comboBox3.Location = new System.Drawing.Point(239, 467);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 39;
             // 
             // label16
             // 
@@ -387,33 +408,70 @@
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(138, 467);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(95, 20);
+            this.label16.Size = new System.Drawing.Size(214, 20);
             this.label16.TabIndex = 38;
-            this.label16.Text = "Filtrar Por";
+            this.label16.Text = "Informe o Cpf do Cliente";
             // 
-            // textBox7
+            // dgvListarClientes
             // 
-            this.textBox7.Location = new System.Drawing.Point(376, 469);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(513, 22);
-            this.textBox7.TabIndex = 40;
+            this.dgvListarClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListarClientes.Location = new System.Drawing.Point(133, 497);
+            this.dgvListarClientes.Name = "dgvListarClientes";
+            this.dgvListarClientes.RowTemplate.Height = 24;
+            this.dgvListarClientes.Size = new System.Drawing.Size(798, 254);
+            this.dgvListarClientes.TabIndex = 42;
+            this.dgvListarClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListarClientes_CellClick);
             // 
-            // button1
+            // txtPais
             // 
-            this.button1.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.search;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(895, 469);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 22);
-            this.button1.TabIndex = 41;
-            this.button1.UseVisualStyleBackColor = true;
+            this.txtPais.Enabled = false;
+            this.txtPais.Location = new System.Drawing.Point(777, 211);
+            this.txtPais.Name = "txtPais";
+            this.txtPais.Size = new System.Drawing.Size(124, 22);
+            this.txtPais.TabIndex = 6;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(773, 183);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(46, 20);
+            this.label18.TabIndex = 43;
+            this.label18.Text = "Pais";
+            // 
+            // btnVerificar
+            // 
+            this.btnVerificar.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.verificar;
+            this.btnVerificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVerificar.Enabled = false;
+            this.btnVerificar.FlatAppearance.BorderSize = 0;
+            this.btnVerificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerificar.Location = new System.Drawing.Point(246, 86);
+            this.btnVerificar.Name = "btnVerificar";
+            this.btnVerificar.Size = new System.Drawing.Size(52, 37);
+            this.btnVerificar.TabIndex = 45;
+            this.btnVerificar.UseVisualStyleBackColor = true;
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.search;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Location = new System.Drawing.Point(895, 469);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(36, 22);
+            this.btnSearch.TabIndex = 41;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnExcluir
             // 
             this.btnExcluir.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.excluir;
             this.btnExcluir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExcluir.Enabled = false;
             this.btnExcluir.FlatAppearance.BorderSize = 0;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Location = new System.Drawing.Point(12, 267);
@@ -421,11 +479,13 @@
             this.btnExcluir.Size = new System.Drawing.Size(52, 37);
             this.btnExcluir.TabIndex = 5;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnLimpar
             // 
             this.btnLimpar.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.limpar;
             this.btnLimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLimpar.Enabled = false;
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Location = new System.Drawing.Point(12, 215);
@@ -438,6 +498,7 @@
             // 
             this.btnAlterar.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.atualizar;
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Location = new System.Drawing.Point(12, 172);
@@ -445,6 +506,7 @@
             this.btnAlterar.Size = new System.Drawing.Size(52, 37);
             this.btnAlterar.TabIndex = 3;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnSalvar
             // 
@@ -458,6 +520,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(52, 42);
             this.btnSalvar.TabIndex = 2;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovoCliente
             // 
@@ -472,73 +535,64 @@
             this.btnNovoCliente.UseVisualStyleBackColor = true;
             this.btnNovoCliente.Click += new System.EventHandler(this.btnNovoCliente_Click);
             // 
-            // dataGridView1
+            // txtCep
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(133, 497);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(798, 254);
-            this.dataGridView1.TabIndex = 42;
+            this.txtCep.Enabled = false;
+            this.txtCep.Location = new System.Drawing.Point(133, 93);
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(107, 22);
+            this.txtCep.TabIndex = 0;
             // 
-            // textBox9
+            // txtFiltro
             // 
-            this.textBox9.Location = new System.Drawing.Point(839, 186);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(124, 22);
-            this.textBox9.TabIndex = 44;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(835, 158);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(46, 20);
-            this.label18.TabIndex = 43;
-            this.label18.Text = "Pais";
+            this.txtFiltro.Location = new System.Drawing.Point(379, 467);
+            this.txtFiltro.Mask = "000.000.000-00";
+            this.txtFiltro.Name = "txtFiltro";
+            this.txtFiltro.Size = new System.Drawing.Size(510, 22);
+            this.txtFiltro.TabIndex = 47;
+            this.txtFiltro.ValidatingType = typeof(System.DateTime);
             // 
             // CadastrarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 763);
-            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.txtFiltro);
+            this.Controls.Add(this.txtCep);
+            this.Controls.Add(this.btnVerificar);
+            this.Controls.Add(this.txtPais);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.dgvListarClientes);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.txtIdCliente);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.maskedTextBox6);
-            this.Controls.Add(this.maskedTextBox5);
+            this.Controls.Add(this.txtDataNasc);
+            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.maskedTextBox4);
+            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cmbSexo);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.txtRg);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtLogradouro);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCpf);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnLimpar);
@@ -548,10 +602,10 @@
             this.Controls.Add(this.label1);
             this.Name = "CadastrarClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastrar Clientes";
+            this.Text = " ";
             this.Load += new System.EventHandler(this.CadastrarClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListarClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -561,47 +615,47 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ErrorProvider errorEmail;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnNovoCliente;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtIdCliente;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListarClientes;
+        private System.Windows.Forms.Button btnVerificar;
+        public System.Windows.Forms.ComboBox cmbEstado;
+        public System.Windows.Forms.TextBox txtCidade;
+        public System.Windows.Forms.TextBox txtBairro;
+        public System.Windows.Forms.TextBox txtLogradouro;
+        public System.Windows.Forms.TextBox txtCep;
+        public System.Windows.Forms.MaskedTextBox txtCpf;
+        public System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.MaskedTextBox txtDataNasc;
+        public System.Windows.Forms.MaskedTextBox txtCelular;
+        public System.Windows.Forms.MaskedTextBox txtTelefone;
+        public System.Windows.Forms.ComboBox cmbSexo;
+        public System.Windows.Forms.MaskedTextBox txtRg;
+        public System.Windows.Forms.Button btnNovoCliente;
+        public System.Windows.Forms.Button btnSalvar;
+        public System.Windows.Forms.Button btnAlterar;
+        public System.Windows.Forms.Button btnLimpar;
+        public System.Windows.Forms.Button btnExcluir;
+        public System.Windows.Forms.TextBox txtNumero;
+        public System.Windows.Forms.TextBox txtPais;
+        public System.Windows.Forms.MaskedTextBox txtFiltro;
     }
 }

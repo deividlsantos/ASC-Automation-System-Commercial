@@ -18,41 +18,38 @@ namespace ASC_Automation_System_Commercial
         {
             InitializeComponent();
         }
-        string pesquisa;
-        private void btnVerificar_Click(object sender, EventArgs e)
-        {
-            EnderecoDAO enderecoBD = new EnderecoDAO();
-            pesquisa = "cep";
-            dgvEndereco.DataSource = enderecoBD.getEndereco(pesquisa, txtCep.Text);
-        }
 
         private void dgvEndereco_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            /*if (btnVerificar.Visible == true) { 
-                DataGridViewRow LinhaSelecionada;
-                LinhaSelecionada = dgvEndereco.CurrentRow;
-                CadastrarClientes abre = new CadastrarClientes();
-                abre.txtIdEndereco.Text = LinhaSelecionada.Cells[0].Value.ToString();
-                abre.Show();
-            }
-            else
-            {
-                if(btnLocalizar.Visible == true)
-                {
-                    DataGridViewRow LinhaSelecionada;
-                    LinhaSelecionada = dgvEndereco.CurrentRow;
-                    CadastrarFuncionarios abre = new CadastrarFuncionarios();
-                    abre.txtIdEndereco.Text = LinhaSelecionada.Cells[0].Value.ToString();
-                    abre.Show();
-                }
-            }*/
-        }
-
-        private void btnLocalizar_Click(object sender, EventArgs e)
-        {
-            EnderecoDAO enderecoBD = new EnderecoDAO();
-            pesquisa = "cep";
-            dgvEndereco.DataSource = enderecoBD.getEndereco(pesquisa, txtCep.Text);
+        {            
+            DataGridViewRow LinhaSelecionada;
+            LinhaSelecionada = dgvEndereco.CurrentRow;
+            CadastrarClientes abre = new CadastrarClientes();
+            abre.txtCep.Text = LinhaSelecionada.Cells[0].Value.ToString();
+            abre.txtLogradouro.Text = LinhaSelecionada.Cells[1].Value.ToString();
+            abre.txtBairro.Text = LinhaSelecionada.Cells[2].Value.ToString();
+            abre.txtCidade.Text = LinhaSelecionada.Cells[3].Value.ToString();
+            abre.cmbEstado.Text = LinhaSelecionada.Cells[4].Value.ToString();
+            abre.txtCep.Enabled = true;
+            abre.txtLogradouro.Enabled = true;
+            abre.txtNumero.Enabled = true;
+            abre.txtBairro.Enabled = true;
+            abre.txtCidade.Enabled = true;
+            abre.cmbEstado.Enabled = true;
+            abre.txtPais.Enabled = true;
+            abre.txtNome.Enabled = true;
+            abre.txtNome.Enabled = true;
+            abre.txtCpf.Enabled = true;
+            abre.txtRg.Enabled = true;
+            abre.txtDataNasc.Enabled = true;
+            abre.cmbSexo.Enabled = true;
+            abre.txtTelefone.Enabled = true;
+            abre.txtCelular.Enabled = true;
+            abre.txtEmail.Enabled = true;
+            abre.btnSalvar.Enabled = true;
+            abre.btnLimpar.Enabled = true;
+            abre.btnNovoCliente.Enabled = false;
+            abre.Show();
+            this.Close();
         }
     }
 }
