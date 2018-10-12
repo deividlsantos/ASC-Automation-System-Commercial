@@ -70,7 +70,7 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovoFunc = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvListaFunc = new System.Windows.Forms.DataGridView();
             this.cmbCargo = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.txtSalario = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaFunc)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFiltro
@@ -116,6 +116,7 @@
             this.btnVerificar.Size = new System.Drawing.Size(52, 37);
             this.btnVerificar.TabIndex = 88;
             this.btnVerificar.UseVisualStyleBackColor = true;
+            this.btnVerificar.Click += new System.EventHandler(this.btnVerificar_Click);
             // 
             // txtPais
             // 
@@ -146,6 +147,7 @@
             this.btnSearch.Size = new System.Drawing.Size(36, 22);
             this.btnSearch.TabIndex = 86;
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label16
             // 
@@ -475,6 +477,7 @@
             this.btnExcluir.Size = new System.Drawing.Size(52, 37);
             this.btnExcluir.TabIndex = 58;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnLimpar
             // 
@@ -488,6 +491,7 @@
             this.btnLimpar.Size = new System.Drawing.Size(52, 37);
             this.btnLimpar.TabIndex = 56;
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnAlterar
             // 
@@ -501,6 +505,7 @@
             this.btnAlterar.Size = new System.Drawing.Size(52, 37);
             this.btnAlterar.TabIndex = 54;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnSalvar
             // 
@@ -514,6 +519,7 @@
             this.btnSalvar.Size = new System.Drawing.Size(52, 42);
             this.btnSalvar.TabIndex = 52;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnNovoFunc
             // 
@@ -538,18 +544,23 @@
             this.label1.TabIndex = 48;
             this.label1.Text = "Cadastro Funcionario";
             // 
-            // dataGridView1
+            // dgvListaFunc
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(157, 623);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(789, 220);
-            this.dataGridView1.TabIndex = 90;
+            this.dgvListaFunc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaFunc.Location = new System.Drawing.Point(157, 623);
+            this.dgvListaFunc.Name = "dgvListaFunc";
+            this.dgvListaFunc.RowTemplate.Height = 24;
+            this.dgvListaFunc.Size = new System.Drawing.Size(789, 220);
+            this.dgvListaFunc.TabIndex = 90;
+            this.dgvListaFunc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaFunc_CellClick);
             // 
             // cmbCargo
             // 
+            this.cmbCargo.Enabled = false;
             this.cmbCargo.FormattingEnabled = true;
+            this.cmbCargo.Items.AddRange(new object[] {
+            "1",
+            "2"});
             this.cmbCargo.Location = new System.Drawing.Point(157, 464);
             this.cmbCargo.Name = "cmbCargo";
             this.cmbCargo.Size = new System.Drawing.Size(256, 24);
@@ -577,6 +588,7 @@
             // 
             // cmbEstadoCivil
             // 
+            this.cmbEstadoCivil.Enabled = false;
             this.cmbEstadoCivil.FormattingEnabled = true;
             this.cmbEstadoCivil.Items.AddRange(new object[] {
             "Solteiro",
@@ -696,7 +708,7 @@
             this.Controls.Add(this.cmbEstadoCivil);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.cmbCargo);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListaFunc);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.txtCep);
             this.Controls.Add(this.btnVerificar);
@@ -741,7 +753,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CadastrarFuncionarios";
             this.Text = "Cadastrar Funcionarios";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaFunc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -791,7 +803,7 @@
         public System.Windows.Forms.Button btnSalvar;
         public System.Windows.Forms.Button btnNovoFunc;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListaFunc;
         private System.Windows.Forms.ComboBox cmbCargo;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;

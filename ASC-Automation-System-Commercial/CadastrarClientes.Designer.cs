@@ -389,7 +389,6 @@
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(133, 22);
             this.txtIdCliente.TabIndex = 37;
-            this.txtIdCliente.Visible = false;
             // 
             // label17
             // 
@@ -400,7 +399,6 @@
             this.label17.Size = new System.Drawing.Size(89, 20);
             this.label17.TabIndex = 36;
             this.label17.Text = "Id Cliente";
-            this.label17.Visible = false;
             // 
             // label16
             // 

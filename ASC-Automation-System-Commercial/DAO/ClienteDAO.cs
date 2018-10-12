@@ -89,7 +89,7 @@ namespace ASC_Automation_System_Commercial.DAO
             MySqlConnection CN = new MySqlConnection(Con);
             MySqlCommand Com = CN.CreateCommand();
 
-            Com.CommandText = "UPDATE cliente SET id_cliente=" + cliente.Id_cliente + ", id_endereco_fk=" + cliente.Id_endereco_fk + ", nome='" + cliente.Nome + "', rg='" + cliente.Rg + "'"
+            Com.CommandText = "UPDATE cliente SET id_cliente=" + cliente.Id_cliente + ", id_endereco_fk='" + cliente.Id_endereco_fk + "', nome='" + cliente.Nome + "', rg='" + cliente.Rg + "'"
                 + ", data_nascimento='" + cliente.Data_nascimento + "', cpf='" + cliente.Cpf + "'" 
                 + ", email='" + cliente.Email + "', telefone='" + cliente.Telefone + "', celular='" + cliente.Celular + "'"
                 + ", sexo='" + cliente.Sexo + "', numero_casa=" + cliente.Numero_casa + ", pais='" + cliente.Pais + "' WHERE id_cliente=" + cliente.Id_cliente;

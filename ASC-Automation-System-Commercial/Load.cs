@@ -28,7 +28,7 @@ namespace ASC_Automation_System_Commercial
                 timerLoader.Enabled = false;
                 this.Hide();
 
-                TelaLogin abre = new TelaLogin();
+                TelaPrincipal abre = new TelaPrincipal();
                 abre.Show();
             }
 

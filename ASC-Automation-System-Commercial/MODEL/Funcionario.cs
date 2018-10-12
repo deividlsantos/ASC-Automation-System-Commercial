@@ -26,6 +26,7 @@ namespace ASC_Automation_System_Commercial.MODEL
         private string data_demissao;
         private int numero_residencia;
         private string pais;
+        private string email;
 
         public int Id_funcionario { get => id_funcionario; set => id_funcionario = value; }
         public string Id_endereco_fk { get => id_endereco_fk; set => id_endereco_fk = value; }
@@ -44,6 +45,7 @@ namespace ASC_Automation_System_Commercial.MODEL
         public string Data_demissao { get => data_demissao; set => data_demissao = value; }
         public int Numero_residencia { get => numero_residencia; set => numero_residencia = value; }
         public string Pais { get => pais; set => pais = value; }
+        public string Email { get => email; set => email = value; }
 
         public Funcionario()
         {

@@ -92,6 +92,8 @@ namespace ASC_Automation_System_Commercial
         private void btnNovoCliente_Click(object sender, EventArgs e)
         {
             habilitar();
+            txtFiltro.Enabled = false;
+            btnSearch.Enabled = false;
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -116,6 +118,8 @@ namespace ASC_Automation_System_Commercial
                 clienteBD.CadastrarCliente(clienteReg);
                 limpar();
                 desabilitar();
+                txtFiltro.Enabled = true;
+                btnSearch.Enabled = true;
                 MessageBox.Show("Cliente cadastrado com sucesso");
             }
             catch (Exception c)
@@ -130,10 +134,7 @@ namespace ASC_Automation_System_Commercial
             {
                 EnderecoDAO endereco = new EnderecoDAO();
                 string pesquisa = "cep";
-                ProcurarEndereco abre = new ProcurarEndereco();
-                abre.dgvEndereco.DataSource = endereco.getEndereco(pesquisa, txtCep.Text);
-                abre.ShowDialog();
-                this.Close();
+                dgvListarClientes.DataSource = endereco.getEndereco(pesquisa, txtCep.Text);
             }
             catch(Exception c)
             {
@@ -164,30 +165,43 @@ namespace ASC_Automation_System_Commercial
 
         private void dgvListarClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridViewRow LinhaSelecionada;
-            LinhaSelecionada = dgvListarClientes.CurrentRow;
-            /*"SELECT id_cliente, id_endereco_fk, nome, rg, cpf, data_nascimento, email, telefone, celular, sexo" 
-                + ", logradouro, numero_casa, bairro, cidade, estado, pais FROM cliente inner join " 
-                + "endereco on cliente.id_endereco_fk = endereco.Cep where " + pesquisa + " like '%" + Cpf + "%'";*/
-            txtCep.Text = LinhaSelecionada.Cells[1].Value.ToString();
-            txtIdCliente.Text = LinhaSelecionada.Cells[0].Value.ToString();
-            txtLogradouro.Text = LinhaSelecionada.Cells[10].Value.ToString();
-            txtNumero.Text = LinhaSelecionada.Cells[11].Value.ToString();
-            txtBairro.Text = LinhaSelecionada.Cells[12].Value.ToString();
-            txtCidade.Text = LinhaSelecionada.Cells[13].Value.ToString();
-            cmbEstado.Text = LinhaSelecionada.Cells[14].Value.ToString();
-            txtPais.Text = LinhaSelecionada.Cells[15].Value.ToString();
-            txtNome.Text = LinhaSelecionada.Cells[2].Value.ToString();
-            txtCpf.Text = LinhaSelecionada.Cells[4].Value.ToString();
-            txtRg.Text = LinhaSelecionada.Cells[3].Value.ToString();
-            txtDataNasc.Text = LinhaSelecionada.Cells[5].Value.ToString();
-            cmbSexo.Text = LinhaSelecionada.Cells[9].Value.ToString();
-            txtTelefone.Text = LinhaSelecionada.Cells[7].Value.ToString();
-            txtCelular.Text = LinhaSelecionada.Cells[8].Value.ToString();
-            txtEmail.Text = LinhaSelecionada.Cells[6].Value.ToString();
-            habilitar();
-            btnAlterar.Enabled = true;
-            btnExcluir.Enabled = true;
+            if(btnSearch.Enabled == true)
+            {            
+                DataGridViewRow LinhaSelecionada;
+                LinhaSelecionada = dgvListarClientes.CurrentRow;
+                txtCep.Text = LinhaSelecionada.Cells[1].Value.ToString();
+                txtIdCliente.Text = LinhaSelecionada.Cells[0].Value.ToString();
+                txtLogradouro.Text = LinhaSelecionada.Cells[10].Value.ToString();
+                txtNumero.Text = LinhaSelecionada.Cells[11].Value.ToString();
+                txtBairro.Text = LinhaSelecionada.Cells[12].Value.ToString();
+                txtCidade.Text = LinhaSelecionada.Cells[13].Value.ToString();
+                cmbEstado.Text = LinhaSelecionada.Cells[14].Value.ToString();
+                txtPais.Text = LinhaSelecionada.Cells[15].Value.ToString();
+                txtNome.Text = LinhaSelecionada.Cells[2].Value.ToString();
+                txtCpf.Text = LinhaSelecionada.Cells[4].Value.ToString();
+                txtRg.Text = LinhaSelecionada.Cells[3].Value.ToString();
+                txtDataNasc.Text = LinhaSelecionada.Cells[5].Value.ToString();
+                cmbSexo.Text = LinhaSelecionada.Cells[9].Value.ToString();
+                txtTelefone.Text = LinhaSelecionada.Cells[7].Value.ToString();
+                txtCelular.Text = LinhaSelecionada.Cells[8].Value.ToString();
+                txtEmail.Text = LinhaSelecionada.Cells[6].Value.ToString();
+                habilitar();
+                btnAlterar.Enabled = true;
+                btnExcluir.Enabled = true;
+                txtFiltro.Enabled = false;
+                btnSearch.Enabled = false;
+            }
+            else
+            {
+                DataGridViewRow LinhaSelecionada;
+                LinhaSelecionada = dgvListarClientes.CurrentRow;
+                txtLogradouro.Text = LinhaSelecionada.Cells[1].Value.ToString();
+                txtBairro.Text = LinhaSelecionada.Cells[2].Value.ToString();
+                txtCidade.Text = LinhaSelecionada.Cells[3].Value.ToString();
+                cmbEstado.Text = LinhaSelecionada.Cells[4].Value.ToString();
+                txtNumero.Text = "";
+                txtPais.Text = "";
+            }
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
@@ -213,6 +227,8 @@ namespace ASC_Automation_System_Commercial
                 clienteBD.Alterar(clienteReg);
                 limpar();
                 desabilitar();
+                txtFiltro.Enabled = true;
+                btnSearch.Enabled = true;
                 MessageBox.Show("Cliente alterado com sucesso");
             }
             catch (Exception c)
@@ -244,6 +260,8 @@ namespace ASC_Automation_System_Commercial
                 clienteBD.Excluir(clienteReg);
                 limpar();
                 desabilitar();
+                txtFiltro.Enabled = true;
+                btnSearch.Enabled = true;
                 MessageBox.Show("Cliente deletado com sucesso");
             }
             catch (Exception c)
