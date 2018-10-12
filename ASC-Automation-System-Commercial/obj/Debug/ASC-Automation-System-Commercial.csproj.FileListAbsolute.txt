@@ -54,3 +54,5 @@ E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automat
 E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC-Automation-System-Commercial.pdb
 E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.Produto.resources
 E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.SelecionarFornecedor.resources
+C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.Produto.resources
+C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.SelecionarFornecedor.resources

@@ -50,8 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\FornecedorDAO.cs" />
+    <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
     <Compile Include="MODEL\Fornecedor.cs" />
+    <Compile Include="MODEL\Funcionario.cs" />
     <Compile Include="MODEL\Produto.cs" />
     <Compile Include="Views\CadastrarFuncionarios.cs">
       <SubType>Form</SubType>
@@ -206,6 +208,8 @@
   <ItemGroup>
     <None Include="Resources\excluir.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\verificar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

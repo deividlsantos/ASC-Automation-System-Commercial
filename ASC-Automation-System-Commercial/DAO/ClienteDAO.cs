@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ASC_Automation_System_Commercial.DAO
 {
     class ClienteDAO
@@ -25,8 +26,8 @@ namespace ASC_Automation_System_Commercial.DAO
             MySqlConnection CN = new MySqlConnection(Con);
             MySqlCommand Com = CN.CreateCommand();
 
-            Com.CommandText = "INSERT INTO cliente(id_endereco_fk,nome,rg,data_nascimento,cpf,email,telefone,celular,sexo,foto,numero_casa,pais) VALUES(?id_endereco_fk,?nome,?rg,?data_nascimento,?cpf,?email,?telefone,?celular,?sexo,?foto,?numero_casa,?pais)";
-            
+            Com.CommandText = "INSERT INTO cliente(id_endereco_fk,nome,rg,data_nascimento,cpf,email,telefone,celular,sexo,numero_casa,pais) VALUES(?id_endereco_fk,?nome,?rg,?data_nascimento,?cpf,?email,?telefone,?celular,?sexo,?numero_casa,?pais)";
+
             Com.Parameters.AddWithValue("?id_endereco_fk", cliente.Id_endereco_fk);
             Com.Parameters.AddWithValue("?nome", cliente.Nome);
             Com.Parameters.AddWithValue("?rg", cliente.Rg);
@@ -36,7 +37,6 @@ namespace ASC_Automation_System_Commercial.DAO
             Com.Parameters.AddWithValue("?telefone", cliente.Telefone);
             Com.Parameters.AddWithValue("?celular", cliente.Celular);
             Com.Parameters.AddWithValue("?sexo", cliente.Sexo);
-            Com.Parameters.AddWithValue("?foto", cliente.Foto);
             Com.Parameters.AddWithValue("?numero_casa", cliente.Numero_casa);
             Com.Parameters.AddWithValue("?pais", cliente.Pais);
 
@@ -45,7 +45,7 @@ namespace ASC_Automation_System_Commercial.DAO
                 CN.Open();
                 int registroAfetados = Com.ExecuteNonQuery();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new ApplicationException(ex.ToString());
             }
@@ -55,15 +55,15 @@ namespace ASC_Automation_System_Commercial.DAO
             }
         }
 
-        public DataTable getCliente(string pesquisa, string cpf)
+        public DataTable getCliente(string pesquisa, string Cpf)
         {
             MySqlConnection CN = new MySqlConnection(Con);
             MySqlCommand cmd = CN.CreateCommand();
             MySqlDataAdapter da;
 
-            cmd.CommandText = "SELECT id_cliente, id_endereco_fk, nome, rg, cpf, data_nascimento, email, telefone, celular, sexo, foto" 
-                + ", logradouro, numero_casa, bairro, cidade, estado, pais FROM cliente inner join " 
-                + "endereco on cliente.id_endereco_fk = endereco.id_endereco where " + pesquisa + " like '%" + cpf + "%'";
+            cmd.CommandText = "SELECT id_cliente, id_endereco_fk, nome, rg, cpf, data_nascimento, email, telefone, celular, sexo"
+                + ", logradouro, numero_casa, bairro, cidade, estado, pais FROM cliente inner join "
+                + "endereco on cliente.id_endereco_fk = endereco.Cep where " + pesquisa + " like '%" + Cpf + "%'";
 
             try
             {
@@ -75,7 +75,7 @@ namespace ASC_Automation_System_Commercial.DAO
                 da.Fill(dtLista);
                 return dtLista;
             }
-            catch(MySqlException ex)
+            catch (MySqlException ex)
             {
                 throw new ApplicationException(ex.ToString());
             }
@@ -90,11 +90,11 @@ namespace ASC_Automation_System_Commercial.DAO
             MySqlConnection CN = new MySqlConnection(Con);
             MySqlCommand Com = CN.CreateCommand();
 
-            Com.CommandText = "UPDATE cliente SET id_cliente=" + cliente.Id_cliente + ", id_endereco_fk=" + cliente.Id_endereco_fk + ", nome='" + cliente.Nome + "', rg='" + cliente.Rg + "'"
-                + ", data_nascimento='" + cliente.Data_nascimento + "', cpf='" + cliente.Cpf + "'" 
+            Com.CommandText = "UPDATE cliente SET id_cliente=" + cliente.Id_cliente + ", id_endereco_fk='" + cliente.Id_endereco_fk + "', nome='" + cliente.Nome + "', rg='" + cliente.Rg + "'"
+                + ", data_nascimento='" + cliente.Data_nascimento + "', cpf='" + cliente.Cpf + "'"
                 + ", email='" + cliente.Email + "', telefone='" + cliente.Telefone + "', celular='" + cliente.Celular + "'"
-                + ", sexo='" + cliente.Sexo + "', foto='" + cliente.Foto + "', numero_casa=" + cliente.Numero_casa + ", pais='" + cliente.Pais + "' WHERE id_cliente=" + cliente.Id_cliente;
-            
+                + ", sexo='" + cliente.Sexo + "', numero_casa=" + cliente.Numero_casa + ", pais='" + cliente.Pais + "' WHERE id_cliente=" + cliente.Id_cliente;
+
             try
             {
                 CN.Open();
@@ -109,7 +109,7 @@ namespace ASC_Automation_System_Commercial.DAO
                 CN.Close();
             }
         }
-        
+
         public void Excluir(Cliente cliente)
         {
             MySqlConnection CN = new MySqlConnection(Con);
