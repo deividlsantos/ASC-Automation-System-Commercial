@@ -12,7 +12,7 @@ namespace ASC_Automation_System_Commercial.DAO
     class EnderecoDAO
     {
         String Con;
-        ProcurarEndereco end = new ProcurarEndereco();
+        //ProcurarEndereco end = new ProcurarEndereco();
         Endereco endereco = new Endereco();
 
         public EnderecoDAO()
@@ -27,7 +27,7 @@ namespace ASC_Automation_System_Commercial.DAO
             MySqlDataAdapter da;
 
             //cmd.CommandText = "SELECT id, nome, endereco, idade FROM Alunos WHERE " + filtro + " LIKE '%" + nome + "%' order by nome"
-            cmd.CommandText = "select id_endereco, logradouro, bairro, cidade, estado from endereco where " + pesquisa + " like '%" + cep + "%'";
+            cmd.CommandText = "select cep, logradouro, bairro, cidade, estado from endereco where " + pesquisa + " like '%" + cep + "%'";
 
             try
             {

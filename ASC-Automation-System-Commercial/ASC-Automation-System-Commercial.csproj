@@ -71,11 +71,11 @@
       <DependentUpon>CadastrarClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="MODEL\Cargo.cs" />
-    <Compile Include="Views\ProcurarEndereco.cs">
+    <Compile Include="Views\Fornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ProcurarEndereco.Designer.cs">
-      <DependentUpon>ProcurarEndereco.cs</DependentUpon>
+    <Compile Include="Views\Fornecedor.Designer.cs">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Load.cs">
       <SubType>Form</SubType>
@@ -118,8 +118,8 @@
     <EmbeddedResource Include="Views\CadastrarFuncionarios.resx">
       <DependentUpon>CadastrarFuncionarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ProcurarEndereco.resx">
-      <DependentUpon>ProcurarEndereco.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Fornecedor.resx">
+      <DependentUpon>Fornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Load.resx">
       <DependentUpon>Load.cs</DependentUpon>

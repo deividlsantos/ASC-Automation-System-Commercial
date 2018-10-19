@@ -39,7 +39,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnProduto = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnFornecedor = new System.Windows.Forms.Button();
             this.btnCadasClien = new System.Windows.Forms.Button();
             this.btnCadasFunc = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
@@ -147,18 +147,19 @@
             this.btnProduto.UseVisualStyleBackColor = true;
             this.btnProduto.Click += new System.EventHandler(this.btnProduto_Click);
             // 
-            // button3
+            // btnFornecedor
             // 
-            this.button3.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.imgForn;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(10, 130);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 46);
-            this.button3.TabIndex = 3;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnFornecedor.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.imgForn;
+            this.btnFornecedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFornecedor.FlatAppearance.BorderSize = 0;
+            this.btnFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFornecedor.Location = new System.Drawing.Point(10, 130);
+            this.btnFornecedor.Name = "btnFornecedor";
+            this.btnFornecedor.Size = new System.Drawing.Size(50, 46);
+            this.btnFornecedor.TabIndex = 3;
+            this.btnFornecedor.UseVisualStyleBackColor = true;
+            this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
             // 
             // btnCadasClien
             // 
@@ -197,7 +198,7 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnProduto);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnFornecedor);
             this.Controls.Add(this.btnCadasClien);
             this.Controls.Add(this.btnCadasFunc);
             this.Controls.Add(this.menuStrip1);
@@ -224,7 +225,7 @@
         private System.Windows.Forms.ToolStripMenuItem sistemaToolStripMenuItem;
         private System.Windows.Forms.Button btnCadasFunc;
         private System.Windows.Forms.Button btnCadasClien;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnFornecedor;
         private System.Windows.Forms.Button btnProduto;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
