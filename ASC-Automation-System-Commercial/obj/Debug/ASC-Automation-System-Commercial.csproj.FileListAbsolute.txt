@@ -42,7 +42,6 @@ E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automat
 E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC-Automation-System-Commercial.csprojAssemblyReference.cache
 E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.CadastrarClientes.resources
 E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.CadastrarFuncionarios.resources
-E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.ProcurarEndereco.resources
 E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Load.resources
 E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Properties.Resources.resources
 E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.TelaLogin.resources
@@ -56,3 +55,4 @@ E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automat
 E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.SelecionarFornecedor.resources
 C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.Produto.resources
 C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.SelecionarFornecedor.resources
+E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.Fornecedor.resources

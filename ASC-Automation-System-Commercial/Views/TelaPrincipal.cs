@@ -30,6 +30,12 @@ namespace ASC_Automation_System_Commercial
             abre.ShowDialog();
         }
 
+        private void btnFornecedor_Click(object sender, EventArgs e)
+        {
+            Fornecedor abre = new Fornecedor();
+            abre.Show();
+        }
+
         private void btnProduto_Click(object sender, EventArgs e)
         {
             Produto abre = new Produto();
