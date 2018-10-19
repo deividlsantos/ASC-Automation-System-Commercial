@@ -35,5 +35,11 @@ namespace ASC_Automation_System_Commercial
             Produto abre = new Produto();
             abre.Show();
         }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            TelaVendas abre = new TelaVendas();
+            abre.Show();
+        }
     }
 }

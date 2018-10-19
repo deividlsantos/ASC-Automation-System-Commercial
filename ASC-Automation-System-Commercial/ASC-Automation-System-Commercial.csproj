@@ -112,6 +112,12 @@
     <Compile Include="Views\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\TelaVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TelaVendas.Designer.cs">
+      <DependentUpon>TelaVendas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Views\CadastrarClientes.resx">
       <DependentUpon>CadastrarClientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +152,9 @@
     <EmbeddedResource Include="Views\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\TelaVendas.resx">
+      <DependentUpon>TelaVendas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\limpar" />
+    <None Include="Resources\limpar1" />
     <None Include="Resources\load.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +220,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\verificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compra.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
