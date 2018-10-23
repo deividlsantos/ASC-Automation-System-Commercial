@@ -35,7 +35,7 @@ namespace ASC_Automation_System_Commercial.Views
                 try
                 {
                     FornecedorDAO fornecedorBD = new FornecedorDAO();
-                    MODEL.Fornecedor fornecedorReg = new MODEL.Fornecedor(txtCep.Text, int.Parse(txtCnpj.Text), txtSocial.Text, txtFantasia.Text, int.Parse(txtTelefone.Text), int.Parse(txtCelular.Text), txtEmail.Text, int.Parse(txtNumero.Text), txtPais.Text);
+                    MODEL.Fornecedor fornecedorReg = new MODEL.Fornecedor(txtCep.Text, txtCnpj.Text, txtSocial.Text, txtFantasia.Text, txtTelefone.Text, txtCelular.Text, txtEmail.Text, int.Parse(txtNumero.Text), txtPais.Text);
 
                     fornecedorBD.CadastrarFornecedor(fornecedorReg);
                     MessageBox.Show("Fornecedor Cadastrado");
@@ -58,7 +58,7 @@ namespace ASC_Automation_System_Commercial.Views
                 try
                 {
                     FornecedorDAO fornecedorBD = new FornecedorDAO();
-                    MODEL.Fornecedor fornecedorReg = new MODEL.Fornecedor(int.Parse(txtid_Fornecedor.Text), txtCep.Text, int.Parse(txtCnpj.Text), txtSocial.Text, txtFantasia.Text, int.Parse(txtTelefone.Text), int.Parse(txtCelular.Text), txtEmail.Text, int.Parse(txtNumero.Text), txtPais.Text);
+                    MODEL.Fornecedor fornecedorReg = new MODEL.Fornecedor(int.Parse(txtid_Fornecedor.Text), txtCep.Text, txtCnpj.Text, txtSocial.Text, txtFantasia.Text, txtTelefone.Text, txtCelular.Text, txtEmail.Text, int.Parse(txtNumero.Text), txtPais.Text);
 
                     fornecedorBD.AlterarFornecedor(fornecedorReg);
                     MessageBox.Show("Fornecedor Alterado");
@@ -81,7 +81,7 @@ namespace ASC_Automation_System_Commercial.Views
                 try
                 {
                     FornecedorDAO fornecedorBD = new FornecedorDAO();
-                    MODEL.Fornecedor fornecedorReg = new MODEL.Fornecedor(int.Parse(txtid_Fornecedor.Text), txtCep.Text, int.Parse(txtCnpj.Text), txtSocial.Text, txtFantasia.Text, int.Parse(txtTelefone.Text), int.Parse(txtCelular.Text), txtEmail.Text, int.Parse(txtNumero.Text), txtPais.Text);
+                    MODEL.Fornecedor fornecedorReg = new MODEL.Fornecedor(int.Parse(txtid_Fornecedor.Text), txtCep.Text, txtCnpj.Text, txtSocial.Text, txtFantasia.Text, txtTelefone.Text, txtCelular.Text, txtEmail.Text, int.Parse(txtNumero.Text), txtPais.Text);
 
                     fornecedorBD.DeletarFornecedor(fornecedorReg);
                     MessageBox.Show("Fornecedor Deletado");

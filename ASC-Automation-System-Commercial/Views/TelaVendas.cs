@@ -66,21 +66,7 @@ namespace ASC_Automation_System_Commercial.Views
             LinhaSelecionada = dgvProduto.CurrentRow;
             txtIdProd.Text = LinhaSelecionada.Cells[0].Value.ToString();
             txtNomeProduto.Text = LinhaSelecionada.Cells[3].Value.ToString();
-            txtValorProduto.Text = LinhaSelecionada.Cells[6].Value.ToString();
-
-            int quantidade = Convert.ToInt32(txtQuantidade.Text);
-            double valorProduto = Convert.ToDouble(txtValorProduto.Text);
-            double valorFinal;
-            if (quantidade == 0)
-            {
-                valorFinal = valorProduto;
-                txtValorTotal.Text = Convert.ToString(valorFinal);
-            }
-            else
-            {
-                valorFinal = valorProduto * quantidade;
-                txtValorTotal.Text = Convert.ToString(valorFinal);
-            }
+            txtValorProduto.Text = LinhaSelecionada.Cells[6].Value.ToString();            
         }
 
         private void dgvCliente_CellClick(object sender, DataGridViewCellEventArgs e)

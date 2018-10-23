@@ -28,14 +28,9 @@ namespace ASC_Automation_System_Commercial
                 timerLoader.Enabled = false;
                 this.Hide();
 
-                TelaPrincipal abre = new TelaPrincipal();
+                TelaLogin abre = new TelaLogin();
                 abre.ShowDialog();
             }
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
 
         }
     }

@@ -23,7 +23,6 @@ C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-
 C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC-Automation-System-Commercial.csprojAssemblyReference.cache
 C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.CadastrarClientes.resources
 C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.CadastrarFuncionarios.resources
-C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.ProcurarEndereco.resources
 C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Load.resources
 C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Properties.Resources.resources
 C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.TelaLogin.resources
@@ -56,3 +55,5 @@ E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automat
 C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.Produto.resources
 C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.SelecionarFornecedor.resources
 E:\Documentos\Informatica\ETEC\DTCC\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.Fornecedor.resources
+C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.Fornecedor.resources
+C:\Users\deivi\Documents\ASC-Automation-System-Commercial\ASC-Automation-System-Commercial\obj\Debug\ASC_Automation_System_Commercial.Views.TelaVendas.resources

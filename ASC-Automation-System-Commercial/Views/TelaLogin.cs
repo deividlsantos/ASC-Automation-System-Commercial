@@ -1,4 +1,6 @@
 ﻿using ASC_Automation_System_Commercial.DAO;
+using ASC_Automation_System_Commercial.MODEL;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,19 +18,6 @@ namespace ASC_Automation_System_Commercial
         public TelaLogin()
         {
             InitializeComponent();
-        }
-
-        private void listaCargo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoginDAO pegar = new LoginDAO();
-
-            listaCargo.DisplayMember = "descricao";
-            listaCargo.ValueMember = "id_cargo";
-            listaCargo.DataSource = pegar.RetornaLocal();
-            //cbLocal.DisplayMember = "loc_descricao";
-            //cbLocal.ValueMember = "loc_cod";
-            //cbLocal.DataSource = localNegocios.RetornaLocal();
-            
         }
 
         private void btnLogar_Click(object sender, EventArgs e)
@@ -69,6 +58,22 @@ namespace ASC_Automation_System_Commercial
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void TelaLogin_Load(object sender, EventArgs e)
+        {
+            MySqlConnection cn = new MySqlConnection();
+            cn.ConnectionString = ("Persist Security Info=False;server=localhost;database=automationcommercial;uid=root;pwd=root");
+            cn.Open();
+            MySqlCommand comando = new MySqlCommand();
+            comando.Connection = cn;
+            comando.CommandText = "SELECT descricao FROM cargo";
+            MySqlDataReader dr = comando.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            cmbCargo.DisplayMember = "descricao";
+            cmbCargo.DataSource = dt;
+            cn.Close();
         }
     }
 }

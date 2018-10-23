@@ -85,7 +85,7 @@ namespace ASC_Automation_System_Commercial.DAO
             MySqlConnection CN = new MySqlConnection(Con);
             MySqlCommand Com = CN.CreateCommand();
 
-            Com.CommandText = "UPDATE fornecedor SET id_endereco_fk='" + fornecedor.Id_endereco_fk + "'" + "," + "cnpj='" + fornecedor.Cnpj + "'" + "," + "razao_social='" + fornecedor.Razao_social + "'" + "," + " nome_fantasia='" + fornecedor.Nome_fantasia + "'" + "," + "telefone='" + fornecedor.Telefone + "'" + "," + "celular='" + fornecedor.Celular + "'" + "," + "email='" + fornecedor.Email + "'" + "," + "numero_estabelecimento='" + fornecedor.Numero_estabelecimento + "'" + "," + "pais='" + fornecedor.Pais + "'" + " WHERE " + "id_fornecedor=" + fornecedor.Id_fornecedor;
+            Com.CommandText = "UPDATE fornecedor SET id_endereco_fk='" + fornecedor.Id_endereco_fk + "'" + "," + "razao_social='" + fornecedor.Razao_social + "'" + "," + " nome_fantasia='" + fornecedor.Nome_fantasia + "'" + "," + "cnpj='" + fornecedor.Cnpj + "'" + "," + "telefone='" + fornecedor.Telefone + "'" + "," + "celular='" + fornecedor.Celular + "'" + "," + "email='" + fornecedor.Email + "'" + "," + "numero_estabelecimento='" + fornecedor.Numero_estabelecimento + "'" + "," + "pais='" + fornecedor.Pais + "'" + " WHERE " + "id_fornecedor=" + fornecedor.Id_fornecedor;
             try
             {
                 CN.Open();

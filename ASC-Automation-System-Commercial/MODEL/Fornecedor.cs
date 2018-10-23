@@ -12,15 +12,15 @@ namespace ASC_Automation_System_Commercial.MODEL
 
         private String id_endereco_fk;
 
-        private int cnpj;
+        private string cnpj;
 
         private String razao_social;
 
         private String nome_fantasia;
 
-        private int telefone;
+        private string telefone;
 
-        private int celular;
+        private string celular;
 
         private String email;
 
@@ -30,11 +30,11 @@ namespace ASC_Automation_System_Commercial.MODEL
 
         public int Id_fornecedor { get => id_fornecedor; set => id_fornecedor = value; }
         public string Id_endereco_fk { get => id_endereco_fk; set => id_endereco_fk = value; }
-        public int Cnpj { get => cnpj; set => cnpj = value; }
+        public string Cnpj { get => cnpj; set => cnpj = value; }
         public string Razao_social { get => razao_social; set => razao_social = value; }
         public string Nome_fantasia { get => nome_fantasia; set => nome_fantasia = value; }
-        public int Telefone { get => telefone; set => telefone = value; }
-        public int Celular { get => celular; set => celular = value; }
+        public string Telefone { get => telefone; set => telefone = value; }
+        public string Celular { get => celular; set => celular = value; }
         public string Email { get => email; set => email = value; }
         public int Numero_estabelecimento { get => numero_estabelecimento; set => numero_estabelecimento = value; }
         public string Pais { get => pais; set => pais = value; }
@@ -44,7 +44,7 @@ namespace ASC_Automation_System_Commercial.MODEL
 
         }
 
-        public Fornecedor(string id_endereco_fk, int cnpj, string razao_social, string nome_fantasia, int telefone, int celular, string email, int numero_estabelecimento, string pais)
+        public Fornecedor(string id_endereco_fk, string cnpj, string razao_social, string nome_fantasia, string telefone, string celular, string email, int numero_estabelecimento, string pais)
         {
             this.Id_endereco_fk = id_endereco_fk;
             this.Cnpj = cnpj;
@@ -57,7 +57,7 @@ namespace ASC_Automation_System_Commercial.MODEL
             this.Pais = pais;
         }
 
-        public Fornecedor(int id_fornecedor, string id_endereco_fk, int cnpj, string razao_social, string nome_fantasia, int telefone, int celular, string email, int numero_estabelecimento, string pais)
+        public Fornecedor(int id_fornecedor, string id_endereco_fk, string cnpj, string razao_social, string nome_fantasia, string telefone, string celular, string email, int numero_estabelecimento, string pais)
         {
             this.Id_fornecedor = id_fornecedor;
             this.Id_endereco_fk = id_endereco_fk;
