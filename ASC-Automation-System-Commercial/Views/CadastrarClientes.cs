@@ -269,5 +269,94 @@ namespace ASC_Automation_System_Commercial
             txtEmail.Enabled = true;
             btnVerificar.Enabled = true;
         }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            string errorMsg;
+            if (!ValidEmailAddress(txtEmail.Text, out errorMsg))
+            {
+                // Cancel the event and select the text to be corrected by the user.
+                e.Cancel = true;
+                txtEmail.Select(0, txtEmail.Text.Length);
+
+                // Set the ErrorProvider error with the text to display. 
+                this.errorEmail.SetError(txtEmail, errorMsg);
+            }
+        }
+
+        private void txtEmail_Validated(object sender, EventArgs e)
+        {
+            errorEmail.SetError(txtEmail, "");
+        }
+
+        public bool ValidEmailAddress(string emailAddress, out string errorMessage)
+        {
+            // Confirm that the email address string is not empty.
+            if (emailAddress.Length == 0)
+            {
+                errorMessage = "email address is required.";
+                return false;
+            }
+
+            // Confirm that there is an "@" and a "." in the email address, and in the correct order.
+            if (emailAddress.IndexOf("@") > -1)
+            {
+                if (emailAddress.IndexOf(".", emailAddress.IndexOf("@")) > emailAddress.IndexOf("@"))
+                {
+                    errorMessage = "";
+                    return true;
+                }
+            }
+
+            errorMessage = "Email invalido ex: someone@example.com ";
+            return false;
+        }
+
+        private void txtCpf_Validating(object sender, CancelEventArgs e)
+        {
+            if (!IsCpf(txtCpf.Text))
+            {
+                // Cancel the event and select the text to be corrected by the user.
+                e.Cancel = true;
+                txtCpf.Select(0, txtCpf.Text.Length);
+            }
+        }
+
+        public static bool IsCpf(string cpf)
+        {
+            int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
+            string tempCpf;
+            string digito;
+            int soma;
+            int resto;
+            cpf = cpf.Trim();
+            cpf = cpf.Replace(".", "").Replace("-", "");
+            if (cpf.Length != 11)
+                return false;
+            tempCpf = cpf.Substring(0, 9);
+            soma = 0;
+
+            for (int i = 0; i < 9; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador1[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = resto.ToString();
+            tempCpf = tempCpf + digito;
+            soma = 0;
+            for (int i = 0; i < 10; i++)
+                soma += int.Parse(tempCpf[i].ToString()) * multiplicador2[i];
+            resto = soma % 11;
+            if (resto < 2)
+                resto = 0;
+            else
+                resto = 11 - resto;
+            digito = digito + resto.ToString();
+            return cpf.EndsWith(digito);
+
+        }        
     }
 }

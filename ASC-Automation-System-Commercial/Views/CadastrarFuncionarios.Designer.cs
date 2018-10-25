@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label22 = new System.Windows.Forms.Label();
             this.txtDataDem = new System.Windows.Forms.MaskedTextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@
             this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,7 +85,10 @@
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnNovoFunc = new System.Windows.Forms.Button();
+            this.errorEmail = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtCpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaFunc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).BeginInit();
             this.SuspendLayout();
             // 
             // label22
@@ -240,6 +243,8 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(371, 22);
             this.txtEmail.TabIndex = 123;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
+            this.txtEmail.Validated += new System.EventHandler(this.txtEmail_Validated);
             // 
             // label15
             // 
@@ -492,16 +497,6 @@
             this.label3.TabIndex = 116;
             this.label3.Text = "Cep";
             // 
-            // txtCpf
-            // 
-            this.txtCpf.Enabled = false;
-            this.txtCpf.Location = new System.Drawing.Point(139, 341);
-            this.txtCpf.Mask = "000.000.000-00";
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(162, 22);
-            this.txtCpf.TabIndex = 114;
-            this.txtCpf.ValidatingType = typeof(System.DateTime);
-            // 
             // txtNome
             // 
             this.txtNome.Enabled = false;
@@ -703,11 +698,25 @@
             this.btnNovoFunc.UseVisualStyleBackColor = true;
             this.btnNovoFunc.Click += new System.EventHandler(this.btnNovoFunc_Click);
             // 
+            // errorEmail
+            // 
+            this.errorEmail.ContainerControl = this;
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Enabled = false;
+            this.txtCpf.Location = new System.Drawing.Point(139, 339);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(162, 22);
+            this.txtCpf.TabIndex = 156;
+            this.txtCpf.Validating += new System.ComponentModel.CancelEventHandler(this.txtCpf_Validating);
+            // 
             // CadastrarFuncionarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(962, 894);
+            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.txtSalario);
@@ -756,7 +765,6 @@
             this.Controls.Add(this.txtLogradouro);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnExcluir);
@@ -768,6 +776,7 @@
             this.Name = "CadastrarFuncionarios";
             this.Text = "Cadastrar Funcionarios";
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaFunc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -813,7 +822,6 @@
         public System.Windows.Forms.TextBox txtLogradouro;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        public System.Windows.Forms.MaskedTextBox txtCpf;
         public System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button btnExcluir;
@@ -832,5 +840,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorEmail;
+        public System.Windows.Forms.TextBox txtCpf;
     }
 }
