@@ -28,6 +28,8 @@ namespace ASC_Automation_System_Commercial.DAO
 
             //cmd.CommandText = "SELECT id, nome, endereco, idade FROM Alunos WHERE " + filtro + " LIKE '%" + nome + "%' order by nome"
             cmd.CommandText = "select cep, logradouro, bairro, cidade, estado from endereco where " + pesquisa + " like '%" + cep + "%'";
+            
+
 
             try
             {

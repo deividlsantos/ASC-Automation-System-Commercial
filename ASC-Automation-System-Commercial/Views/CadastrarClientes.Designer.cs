@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.errorEmail = new System.Windows.Forms.ErrorProvider(this.components);
             this.txtCep = new System.Windows.Forms.TextBox();
             this.btnVerificar = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             this.txtLogradouro = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
@@ -72,10 +74,13 @@
             this.dgvListarClientes = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.txtCpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarClientes)).BeginInit();
             this.SuspendLayout();
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // errorEmail
             // 
@@ -147,8 +152,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(371, 22);
             this.txtEmail.TabIndex = 70;
-            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
-            this.txtEmail.Validated += new System.EventHandler(this.txtEmail_Validated);
             // 
             // label15
             // 
@@ -401,6 +404,16 @@
             this.label3.TabIndex = 63;
             this.label3.Text = "Cep";
             // 
+            // txtCpf
+            // 
+            this.txtCpf.Enabled = false;
+            this.txtCpf.Location = new System.Drawing.Point(154, 340);
+            this.txtCpf.Mask = "000.000.000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(162, 22);
+            this.txtCpf.TabIndex = 61;
+            this.txtCpf.ValidatingType = typeof(System.DateTime);
+            // 
             // txtNome
             // 
             this.txtNome.Enabled = false;
@@ -540,21 +553,11 @@
             this.label16.TabIndex = 85;
             this.label16.Text = "Informe o Cpf do Cliente";
             // 
-            // txtCpf
-            // 
-            this.txtCpf.Enabled = false;
-            this.txtCpf.Location = new System.Drawing.Point(154, 338);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(165, 22);
-            this.txtCpf.TabIndex = 89;
-            this.txtCpf.Validating += new System.ComponentModel.CancelEventHandler(this.txtCpf_Validating);
-            // 
             // CadastrarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 763);
-            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.dgvListarClientes);
             this.Controls.Add(this.btnSearch);
@@ -589,6 +592,7 @@
             this.Controls.Add(this.txtLogradouro);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnExcluir);
@@ -608,6 +612,7 @@
         }
 
         #endregion
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.ErrorProvider errorEmail;
         public System.Windows.Forms.MaskedTextBox txtFiltro;
         private System.Windows.Forms.DataGridView dgvListarClientes;
@@ -643,6 +648,7 @@
         public System.Windows.Forms.TextBox txtLogradouro;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.MaskedTextBox txtCpf;
         public System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Button btnExcluir;
@@ -651,6 +657,5 @@
         public System.Windows.Forms.Button btnSalvar;
         public System.Windows.Forms.Button btnNovoCliente;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox txtCpf;
     }
 }

@@ -1,5 +1,4 @@
 ﻿using ASC_Automation_System_Commercial.DAO;
-using ASC_Automation_System_Commercial.MODEL;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -18,6 +17,19 @@ namespace ASC_Automation_System_Commercial
         public TelaLogin()
         {
             InitializeComponent();
+        }
+
+        private void listaCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoginDAO pegar = new LoginDAO();
+
+            cmbCargo.DisplayMember = "descricao";
+            cmbCargo.ValueMember = "id_cargo";
+            cmbCargo.DataSource = pegar.RetornaLocal();
+            //cbLocal.DisplayMember = "loc_descricao";
+            //cbLocal.ValueMember = "loc_cod";
+            //cbLocal.DataSource = localNegocios.RetornaLocal();
+            
         }
 
         private void btnLogar_Click(object sender, EventArgs e)

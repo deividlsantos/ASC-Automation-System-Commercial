@@ -48,12 +48,12 @@ namespace ASC_Automation_System_Commercial.MODEL
             this.Preco = preco;
             this.Quantidade = quantidade;
         }
-        public Produto(int codigo_produto, int id_fornecedor_fk, string tipo, string fabricante, string modelo, string cor, double preco, int quantidade)
+        public Produto(int codigo_produto, int id_fornecedor_fk, string fabricante, string tipo, string modelo, string cor, double preco, int quantidade)
         {
             this.Codigo_produto = codigo_produto;
             this.id_fornecedor_fk = id_fornecedor_fk;
-            this.Tipo = tipo;
             this.Fabricante = fabricante;
+            this.Tipo = tipo;
             this.Modelo = modelo;
             this.Cor = cor;
             this.Preco = preco;

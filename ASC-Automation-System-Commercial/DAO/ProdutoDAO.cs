@@ -51,12 +51,112 @@ namespace ASC_Automation_System_Commercial.DAO
         {
             MySqlConnection CN = new MySqlConnection(Con);
             MySqlCommand Com = CN.CreateCommand();
-
             Com.CommandText = "UPDATE produto SET id_fornecedor_fk='" + produto.Id_fornecedor_fk + "'" + "," + "fabricante='" + produto.Fabricante + "'" + "," + "tipo='" + produto.Tipo + "'" + "," + " modelo='" + produto.Modelo + "'" + "," + "cor='" + produto.Cor + "'" + "," + "preco='" + produto.Preco + "'" + "," + "quantidade='" + produto.Quantidade + "'" + " WHERE " + "codigo_produto=" + produto.Codigo_produto;
             try
             {
                 CN.Open();
                 int registrosAfetados = Com.ExecuteNonQuery();
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
+        public DataTable sCodigo(int codigo_produto)
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand Com = CN.CreateCommand();
+            MySqlDataAdapter da;
+            Com.CommandText = "SELECT * FROM produto WHERE codigo_produto = " + codigo_produto;
+            try
+            {
+                CN.Open();
+                Com = new MySqlCommand(Com.CommandText, CN);
+                da = new MySqlDataAdapter(Com);
+                DataTable dtProduto = new DataTable();
+                da.Fill(dtProduto);
+                return dtProduto;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
+        public DataTable sFabricante(String pesquisa, string fabricante)
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand Com = CN.CreateCommand();
+            MySqlDataAdapter da;
+            Com.CommandText = "SELECT * FROM produto WHERE " + pesquisa + " LIKE '%" + fabricante + "%'";
+            try
+            {
+                CN.Open();
+                Com = new MySqlCommand(Com.CommandText, CN);
+                da = new MySqlDataAdapter(Com);
+                DataTable dtProduto = new DataTable();
+                da.Fill(dtProduto);
+                return dtProduto;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
+        public DataTable sTipo(string tipo)
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand Com = CN.CreateCommand();
+            MySqlDataAdapter da;
+            Com.CommandText = "SELECT * FROM produto WHERE tipo = '" + tipo + "'";
+            try
+            {
+                CN.Open();
+                Com = new MySqlCommand(Com.CommandText, CN);
+                da = new MySqlDataAdapter(Com);
+
+                DataTable dtProduto = new DataTable();
+                da.Fill(dtProduto);
+                return dtProduto;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
+        public DataTable sModelo(String pesquisa, string modelo)
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand Com = CN.CreateCommand();
+            MySqlDataAdapter da;
+            Com.CommandText = "SELECT * FROM produto WHERE " + pesquisa + " LIKE '%" + modelo + "%'";
+            try
+            {
+                CN.Open();
+                Com = new MySqlCommand(Com.CommandText, CN);
+                da = new MySqlDataAdapter(Com);
+                DataTable dtProduto = new DataTable();
+                da.Fill(dtProduto);
+                return dtProduto;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
             }
             finally
             {
@@ -70,7 +170,6 @@ namespace ASC_Automation_System_Commercial.DAO
             MySqlCommand Com = CN.CreateCommand();
             MySqlDataAdapter da;
             Com.CommandText = "SELECT * FROM produto";
-
             try
             {
                 CN.Open();
@@ -97,13 +196,11 @@ namespace ASC_Automation_System_Commercial.DAO
             MySqlCommand Com = CN.CreateCommand();
             MySqlDataAdapter da;
             Com.CommandText = "SELECT * FROM produto WHERE codigo_produto = " + codigo;
-
             try
             {
                 CN.Open();
                 Com = new MySqlCommand(Com.CommandText, CN);
                 da = new MySqlDataAdapter(Com);
-
                 DataTable dtProduto = new DataTable();
                 da.Fill(dtProduto);
                 return dtProduto;
@@ -122,9 +219,7 @@ namespace ASC_Automation_System_Commercial.DAO
         {
             MySqlConnection CN = new MySqlConnection(Con);
             MySqlCommand Com = CN.CreateCommand();
-
             Com.CommandText = "DELETE FROM produto WHERE codigo_produto=" + produto.Codigo_produto;
-
             try
             {
                 CN.Open();

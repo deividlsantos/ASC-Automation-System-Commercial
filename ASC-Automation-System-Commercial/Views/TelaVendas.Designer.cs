@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.button4 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.nmcQuantidade = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
             this.txtValorProduto = new System.Windows.Forms.TextBox();
             this.txtIdVenda = new System.Windows.Forms.TextBox();
@@ -46,6 +46,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cmbDesconto = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,18 +63,28 @@
             this.txtCodProd = new System.Windows.Forms.TextBox();
             this.btnPesqProd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmcQuantidade)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
             // 
+            // button4
+            // 
+            this.button4.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.atualizar;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(833, 459);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(78, 71);
+            this.button4.TabIndex = 29;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.nmcQuantidade);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.txtValorProduto);
             this.groupBox3.Controls.Add(this.txtIdVenda);
@@ -90,6 +101,7 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.cmbDesconto);
             this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.txtQuantidade);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.textBox3);
             this.groupBox3.Controls.Add(this.label4);
@@ -103,28 +115,6 @@
             this.groupBox3.TabIndex = 28;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Registrar Vendas";
-            // 
-            // nmcQuantidade
-            // 
-            this.nmcQuantidade.Location = new System.Drawing.Point(290, 117);
-            this.nmcQuantidade.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nmcQuantidade.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nmcQuantidade.Name = "nmcQuantidade";
-            this.nmcQuantidade.Size = new System.Drawing.Size(87, 27);
-            this.nmcQuantidade.TabIndex = 27;
-            this.nmcQuantidade.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // label12
             // 
@@ -168,7 +158,6 @@
             // 
             // button3
             // 
-            this.button3.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.limpar1;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -221,7 +210,6 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.compra;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -297,6 +285,15 @@
             this.label6.Size = new System.Drawing.Size(92, 17);
             this.label6.TabIndex = 11;
             this.label6.Text = "Quantidade";
+            // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantidade.Location = new System.Drawing.Point(288, 117);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(96, 22);
+            this.txtQuantidade.TabIndex = 10;
+            this.txtQuantidade.Text = "1";
             // 
             // label5
             // 
@@ -469,19 +466,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Informe o Codigo do Produto:";
             // 
-            // button4
-            // 
-            this.button4.BackgroundImage = global::ASC_Automation_System_Commercial.Properties.Resources.atualizar;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(833, 459);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(78, 71);
-            this.button4.TabIndex = 29;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Visible = false;
-            // 
             // TelaVendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -495,7 +479,6 @@
             this.Text = "TelaVendas";
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nmcQuantidade)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
@@ -526,6 +509,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbDesconto;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
@@ -542,6 +526,5 @@
         private System.Windows.Forms.TextBox txtCodProd;
         private System.Windows.Forms.Button btnPesqProd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown nmcQuantidade;
     }
 }

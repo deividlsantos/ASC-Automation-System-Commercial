@@ -93,16 +93,6 @@ namespace ASC_Automation_System_Commercial.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap compra {
-            get {
-                object obj = ResourceManager.GetObject("compra", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap dados {
             get {
                 object obj = ResourceManager.GetObject("dados", resourceCulture);
@@ -176,16 +166,6 @@ namespace ASC_Automation_System_Commercial.Properties {
         internal static System.Drawing.Bitmap limpar {
             get {
                 object obj = ResourceManager.GetObject("limpar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap limpar1 {
-            get {
-                object obj = ResourceManager.GetObject("limpar1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
