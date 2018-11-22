@@ -18,7 +18,82 @@ namespace ASC_Automation_System_Commercial.DAO
             Con = "Persist Security Info=False;server=localhost;database=automationcommercial;uid=root;pwd=root";
         }
 
-        //Selecionar fonecerdor
+        //Selecionar fonecedor
+
+        public DataTable cnpj(int cnpj)
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand Com = CN.CreateCommand();
+            MySqlDataAdapter da;
+            Com.CommandText = "SELECT * FROM fornecedor WHERE cnpj = " + cnpj;
+            try
+            {
+                CN.Open();
+                Com = new MySqlCommand(Com.CommandText, CN);
+                da = new MySqlDataAdapter(Com);
+                DataTable dtFornecedor = new DataTable();
+                da.Fill(dtFornecedor);
+                return dtFornecedor;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
+        public DataTable social(String pesquisa, string razao_social)
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand Com = CN.CreateCommand();
+            MySqlDataAdapter da;
+            Com.CommandText = "SELECT * FROM fornecedor WHERE " + pesquisa + " LIKE '%" + razao_social + "%'";
+            try
+            {
+                CN.Open();
+                Com = new MySqlCommand(Com.CommandText, CN);
+                da = new MySqlDataAdapter(Com);
+                DataTable dtFornecedor = new DataTable();
+                da.Fill(dtFornecedor);
+                return dtFornecedor;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
+        public DataTable fantasia(String pesquisa, string nome_fantasia)
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand Com = CN.CreateCommand();
+            MySqlDataAdapter da;
+            Com.CommandText = "SELECT * FROM fornecedor WHERE " + pesquisa + " LIKE '%" + nome_fantasia + "%'";
+            try
+            {
+                CN.Open();
+                Com = new MySqlCommand(Com.CommandText, CN);
+                da = new MySqlDataAdapter(Com);
+                DataTable dtFornecedor = new DataTable();
+                da.Fill(dtFornecedor);
+                return dtFornecedor;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
 
         public DataTable getFornecedor()
         {
