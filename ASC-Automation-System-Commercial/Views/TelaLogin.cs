@@ -29,7 +29,7 @@ namespace ASC_Automation_System_Commercial
             //cbLocal.DisplayMember = "loc_descricao";
             //cbLocal.ValueMember = "loc_cod";
             //cbLocal.DataSource = localNegocios.RetornaLocal();
-            
+
         }
 
         private void btnLogar_Click(object sender, EventArgs e)

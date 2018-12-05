@@ -38,5 +38,10 @@ namespace ASC_Automation_System_Commercial
         {
 
         }
+
+        private void loadBar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

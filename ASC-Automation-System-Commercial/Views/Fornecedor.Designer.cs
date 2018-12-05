@@ -69,6 +69,7 @@
             this.rdbFantasia = new System.Windows.Forms.RadioButton();
             this.btnPesquisar = new System.Windows.Forms.Button();
             this.rdbTodos = new System.Windows.Forms.RadioButton();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEndereco)).BeginInit();
             this.SuspendLayout();
@@ -117,7 +118,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(113, 110);
+            this.label6.Location = new System.Drawing.Point(280, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(45, 17);
             this.label6.TabIndex = 5;
@@ -206,18 +207,17 @@
             // txtid_Fornecedor
             // 
             this.txtid_Fornecedor.Enabled = false;
-            this.txtid_Fornecedor.Location = new System.Drawing.Point(116, 387);
+            this.txtid_Fornecedor.Location = new System.Drawing.Point(116, 130);
             this.txtid_Fornecedor.Name = "txtid_Fornecedor";
-            this.txtid_Fornecedor.Size = new System.Drawing.Size(100, 20);
+            this.txtid_Fornecedor.Size = new System.Drawing.Size(73, 20);
             this.txtid_Fornecedor.TabIndex = 14;
-            this.txtid_Fornecedor.Visible = false;
             // 
             // txtCnpj
             // 
             this.txtCnpj.Enabled = false;
-            this.txtCnpj.Location = new System.Drawing.Point(116, 130);
+            this.txtCnpj.Location = new System.Drawing.Point(283, 130);
             this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(100, 20);
+            this.txtCnpj.Size = new System.Drawing.Size(155, 20);
             this.txtCnpj.TabIndex = 15;
             // 
             // txtSocial
@@ -251,7 +251,7 @@
             this.txtEmail.Enabled = false;
             this.txtEmail.Location = new System.Drawing.Point(376, 345);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(247, 20);
+            this.txtEmail.Size = new System.Drawing.Size(245, 20);
             this.txtEmail.TabIndex = 19;
             // 
             // txtCep
@@ -275,7 +275,7 @@
             this.txtCidade.Enabled = false;
             this.txtCidade.Location = new System.Drawing.Point(115, 302);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(244, 20);
+            this.txtCidade.Size = new System.Drawing.Size(245, 20);
             this.txtCidade.TabIndex = 22;
             // 
             // txtNumero
@@ -510,11 +510,22 @@
             this.rdbTodos.UseVisualStyleBackColor = true;
             this.rdbTodos.CheckedChanged += new System.EventHandler(this.rdbTodos_CheckedChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(113, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 17);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Id:";
+            // 
             // Fornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 609);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.rdbTodos);
             this.Controls.Add(this.btnPesquisar);
             this.Controls.Add(this.rdbFantasia);
@@ -609,5 +620,6 @@
         private System.Windows.Forms.RadioButton rdbFantasia;
         private System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.RadioButton rdbTodos;
+        private System.Windows.Forms.Label label1;
     }
 }

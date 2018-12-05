@@ -184,8 +184,8 @@ namespace ASC_Automation_System_Commercial.Views
                 MessageBox.Show("Selecione alguma opção para realizar a busca!");
             }
 
-            if (rdbCodigo.Checked == true) {
-
+            if (rdbCodigo.Checked == true)
+            {
                 if (txtcProduto.Text == "")
                 {
                     MessageBox.Show("O campo codigo esta vazio!");

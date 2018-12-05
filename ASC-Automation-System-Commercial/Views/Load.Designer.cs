@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Load));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timerLoader = new System.Windows.Forms.Timer(this.components);
             this.loadBar = new System.Windows.Forms.ProgressBar();
@@ -37,9 +38,10 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ASC_Automation_System_Commercial.Properties.Resources.load;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
@@ -61,6 +63,7 @@
             this.loadBar.Name = "loadBar";
             this.loadBar.Size = new System.Drawing.Size(469, 12);
             this.loadBar.TabIndex = 1;
+            this.loadBar.Click += new System.EventHandler(this.loadBar_Click);
             // 
             // Load
             // 

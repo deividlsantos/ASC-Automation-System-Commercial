@@ -44,7 +44,7 @@ namespace ASC_Automation_System_Commercial
 
         private void btnVendas_Click(object sender, EventArgs e)
         {
-            TelaVendas abre = new TelaVendas();
+            Vendas abre = new Vendas();
             abre.Show();
         }
     }

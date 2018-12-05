@@ -52,9 +52,12 @@
     <Compile Include="DAO\FornecedorDAO.cs" />
     <Compile Include="DAO\FuncionarioDAO.cs" />
     <Compile Include="DAO\ProdutoDAO.cs" />
+    <Compile Include="DAO\VendaDAO.cs" />
     <Compile Include="MODEL\Fornecedor.cs" />
     <Compile Include="MODEL\Funcionario.cs" />
+    <Compile Include="MODEL\Item.cs" />
     <Compile Include="MODEL\Produto.cs" />
+    <Compile Include="MODEL\Venda.cs" />
     <Compile Include="Views\CadastrarFuncionarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,11 +109,11 @@
     <Compile Include="Views\TelaPrincipal.Designer.cs">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\TelaVendas.cs">
+    <Compile Include="Views\Vendas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\TelaVendas.Designer.cs">
-      <DependentUpon>TelaVendas.cs</DependentUpon>
+    <Compile Include="Views\Vendas.Designer.cs">
+      <DependentUpon>Vendas.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Views\CadastrarClientes.resx">
       <DependentUpon>CadastrarClientes.cs</DependentUpon>
@@ -143,8 +146,8 @@
     <EmbeddedResource Include="Views\TelaPrincipal.resx">
       <DependentUpon>TelaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\TelaVendas.resx">
-      <DependentUpon>TelaVendas.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Vendas.resx">
+      <DependentUpon>Vendas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

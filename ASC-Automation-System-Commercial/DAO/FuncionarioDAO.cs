@@ -95,6 +95,31 @@ namespace ASC_Automation_System_Commercial.DAO
             }
         }
 
+        public DataTable sCodigo(int id_funcionario)
+        {
+            MySqlConnection CN = new MySqlConnection(Con);
+            MySqlCommand Com = CN.CreateCommand();
+            MySqlDataAdapter da;
+            Com.CommandText = "SELECT id_funcionario, id_cargo_fk, nome, sexo FROM funcionario WHERE id_funcionario = " + id_funcionario;
+            try
+            {
+                CN.Open();
+                Com = new MySqlCommand(Com.CommandText, CN);
+                da = new MySqlDataAdapter(Com);
+                DataTable dtFuncionario = new DataTable();
+                da.Fill(dtFuncionario);
+                return dtFuncionario;
+            }
+            catch (MySqlException ex)
+            {
+                throw new ApplicationException(ex.ToString());
+            }
+            finally
+            {
+                CN.Close();
+            }
+        }
+
         public void Alterar(Funcionario funcionario)
         {
             MySqlConnection CN = new MySqlConnection(Con);

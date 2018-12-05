@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.12, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: automationcommercial
+-- Host: localhost    Database: automationcommercial
 -- ------------------------------------------------------
 -- Server version	8.0.12
 
@@ -64,7 +64,7 @@ CREATE TABLE `cliente` (
   PRIMARY KEY (`id_cliente`),
   KEY `id_endereco_fk` (`id_endereco_fk`),
   CONSTRAINT `cliente_ibfk_1` FOREIGN KEY (`id_endereco_fk`) REFERENCES `endereco` (`cep`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,7 +73,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (5,'14808277','Elaine','55,444,333-2','21/06/1956','555,444,333-22','teste@teste.com','(16) 3333-3333','(16) 99999-9999','Feminino',228,'Brasil'),(6,'01255010','Elaine','55,444,333-2','21/06/1956','555,444,333-22','teste@teste.com','(16) 3333-3333','(16) 99999-9999','Feminino',600,'Brasil');
+INSERT INTO `cliente` VALUES (5,'01227200','Elaine','55,444,333-2','21/06/1956','111,111,111-11','teste@teste.com','(16) 3333-3333','(16) 99999-9999','Feminino',123,'brasil'),(6,'01255010','Elaine','55,444,333-2','21/06/1956','1111111111111','teste@teste.com','(16) 3333-3333','(16) 99999-9999','Feminino',600,'Brasil'),(8,'14808277','Cliente','00,000,000-0','01/01/0001','420,220,758-03','www@com.br','(60) 0000-0000','(11) 00000-0000','Masculino',181,'Brasil');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -119,12 +119,13 @@ CREATE TABLE `fornecedor` (
   `cnpj` int(14) NOT NULL,
   `telefone` int(10) NOT NULL,
   `celular` int(11) NOT NULL,
+  `email` varchar(45) NOT NULL,
   `numero_estabelecimento` int(11) NOT NULL,
   `pais` varchar(50) NOT NULL,
   PRIMARY KEY (`id_fornecedor`),
   KEY `id_endereco_fk` (`id_endereco_fk`),
   CONSTRAINT `fornecedor_ibfk_1` FOREIGN KEY (`id_endereco_fk`) REFERENCES `endereco` (`cep`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -133,6 +134,7 @@ CREATE TABLE `fornecedor` (
 
 LOCK TABLES `fornecedor` WRITE;
 /*!40000 ALTER TABLE `fornecedor` DISABLE KEYS */;
+INSERT INTO `fornecedor` VALUES (1,'01029901','LOJA','LOJAO',123456789,8282,123456789,'@@@',858,'BRRR'),(14,'01255010','LOJASCCC','LOJINHA',38768,3939,868,'WWW',868,'BR');
 /*!40000 ALTER TABLE `fornecedor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -167,7 +169,7 @@ CREATE TABLE `funcionario` (
   KEY `id_endereco_fk` (`id_endereco_fk`),
   CONSTRAINT `funcionario_ibfk_1` FOREIGN KEY (`id_cargo_fk`) REFERENCES `cargo` (`id_cargo`),
   CONSTRAINT `funcionario_ibfk_2` FOREIGN KEY (`id_endereco_fk`) REFERENCES `endereco` (`cep`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -176,7 +178,7 @@ CREATE TABLE `funcionario` (
 
 LOCK TABLES `funcionario` WRITE;
 /*!40000 ALTER TABLE `funcionario` DISABLE KEYS */;
-INSERT INTO `funcionario` VALUES (1,'01311914',1,'Luciana Gimenez','Feminino','1989-05-17','Casado','45022011506','408285546',NULL,'16997145896','lucianagimenez@gmail.com',4846.00,NULL,'2016-06-10',NULL,500,'Brasil');
+INSERT INTO `funcionario` VALUES (1,'01311914',1,'Luciana Gimenez','Feminino','1989-05-17','Casado','45022011506','408285546',NULL,'16997145896','lucianagimenez@gmail.com',4846.00,NULL,'2016-06-10',NULL,500,'Brasil'),(4,'01311914',1,'Luciana Gimenez','Feminino','1989-05-17','Casado','45022011506','408285546',NULL,'16997145896','lucianagimenez@gmail.com',4846.00,NULL,'2016-06-10',NULL,500,'Brasil');
 /*!40000 ALTER TABLE `funcionario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -198,7 +200,7 @@ CREATE TABLE `logins` (
   KEY `id_cargo_fk` (`id_cargo_fk`),
   CONSTRAINT `logins_ibfk_1` FOREIGN KEY (`id_funcionario_fk`) REFERENCES `funcionario` (`id_funcionario`),
   CONSTRAINT `logins_ibfk_2` FOREIGN KEY (`id_cargo_fk`) REFERENCES `cargo` (`id_cargo`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -207,8 +209,76 @@ CREATE TABLE `logins` (
 
 LOCK TABLES `logins` WRITE;
 /*!40000 ALTER TABLE `logins` DISABLE KEYS */;
-INSERT INTO `logins` VALUES (1,1,1,'123456789','123456789');
+INSERT INTO `logins` VALUES (1,1,1,'123456789','123456789'),(2,1,1,'123456789','123456789');
 /*!40000 ALTER TABLE `logins` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `produto`
+--
+
+DROP TABLE IF EXISTS `produto`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `produto` (
+  `codigo_produto` bigint(13) NOT NULL AUTO_INCREMENT,
+  `id_fornecedor_fk` bigint(20) NOT NULL,
+  `fabricante` varchar(60) NOT NULL,
+  `tipo` varchar(60) NOT NULL,
+  `modelo` varchar(60) NOT NULL,
+  `cor` varchar(20) NOT NULL,
+  `preco` decimal(10,0) NOT NULL,
+  `quantidade` int(10) DEFAULT NULL,
+  PRIMARY KEY (`codigo_produto`),
+  KEY `id_fornecedor_fk` (`id_fornecedor_fk`),
+  CONSTRAINT `produto_ibfk_1` FOREIGN KEY (`id_fornecedor_fk`) REFERENCES `fornecedor` (`id_fornecedor`)
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `produto`
+--
+
+LOCK TABLES `produto` WRITE;
+/*!40000 ALTER TABLE `produto` DISABLE KEYS */;
+INSERT INTO `produto` VALUES (17,14,'MOTOROLA','SMART PHONE','MOTOG5','AZUL',1500,10),(18,14,'SAMSUNG','SMART PHONE','J7PRIME','PRETO',1000,10);
+/*!40000 ALTER TABLE `produto` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `venda`
+--
+
+DROP TABLE IF EXISTS `venda`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `venda` (
+  `codigo_venda` int(11) NOT NULL AUTO_INCREMENT,
+  `codigo_produto_fk` bigint(11) NOT NULL,
+  `id_funcionario_fk` bigint(20) NOT NULL,
+  `id_cliente_fk` bigint(20) NOT NULL,
+  `data_venda` date DEFAULT NULL,
+  `quantidade` int(11) NOT NULL,
+  `valor_unitario` int(11) NOT NULL,
+  `total_produto` int(11) NOT NULL,
+  PRIMARY KEY (`codigo_venda`),
+  KEY `venda_ibfk_3_idx` (`codigo_produto_fk`),
+  KEY `venda_ibfk_1` (`id_funcionario_fk`),
+  KEY `venda_ibfk_2` (`id_cliente_fk`),
+  CONSTRAINT `venda_ibfk_1` FOREIGN KEY (`id_funcionario_fk`) REFERENCES `funcionario` (`id_funcionario`),
+  CONSTRAINT `venda_ibfk_2` FOREIGN KEY (`id_cliente_fk`) REFERENCES `cliente` (`id_cliente`),
+  CONSTRAINT `venda_ibfk_3` FOREIGN KEY (`codigo_produto_fk`) REFERENCES `produto` (`codigo_produto`)
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `venda`
+--
+
+LOCK TABLES `venda` WRITE;
+/*!40000 ALTER TABLE `venda` DISABLE KEYS */;
+INSERT INTO `venda` VALUES (5,17,1,5,NULL,1,1500,1500),(6,17,1,5,NULL,1,1500,1500),(7,17,1,5,NULL,1,1500,1500),(8,17,1,6,NULL,1,1500,1500),(9,18,1,6,NULL,1,1000,1000),(10,17,1,6,NULL,1,1500,1500),(11,17,1,5,NULL,1,1500,1500),(12,18,1,5,NULL,1,1000,1000),(13,17,1,5,NULL,1,1500,1500),(14,17,1,5,NULL,1,1500,1500),(15,17,1,5,NULL,1,1500,1500),(16,17,1,5,NULL,1,1500,1500),(17,17,1,5,NULL,1,1500,1500),(18,17,1,5,NULL,1,1500,1500),(19,17,1,5,NULL,1,1500,1500),(20,17,1,5,NULL,1,1500,1500),(21,17,1,5,NULL,1,1500,1500),(22,17,1,5,NULL,1,1500,1500);
+/*!40000 ALTER TABLE `venda` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -228,4 +298,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-10-12 19:30:09
+-- Dump completed on 2018-12-04 21:53:41

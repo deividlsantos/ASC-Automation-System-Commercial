@@ -41,7 +41,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.btnFornecedor = new System.Windows.Forms.Button();
             this.btnNProduto = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
@@ -59,8 +58,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPesquisa = new System.Windows.Forms.Button();
             this.dgvFornecedor = new System.Windows.Forms.DataGridView();
+            this.txtQuantidade = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProduto
@@ -92,7 +93,7 @@
             this.txtcProduto.Location = new System.Drawing.Point(116, 133);
             this.txtcProduto.MaxLength = 100000;
             this.txtcProduto.Name = "txtcProduto";
-            this.txtcProduto.Size = new System.Drawing.Size(100, 20);
+            this.txtcProduto.Size = new System.Drawing.Size(73, 20);
             this.txtcProduto.TabIndex = 3;
             // 
             // txtFornecedor
@@ -204,15 +205,6 @@
             this.label7.Size = new System.Drawing.Size(97, 17);
             this.label7.TabIndex = 13;
             this.label7.Text = "Quantidade:";
-            // 
-            // txtQuantidade
-            // 
-            this.txtQuantidade.Enabled = false;
-            this.txtQuantidade.Location = new System.Drawing.Point(386, 285);
-            this.txtQuantidade.MaxLength = 5;
-            this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(121, 20);
-            this.txtQuantidade.TabIndex = 9;
             // 
             // btnFornecedor
             // 
@@ -434,6 +426,7 @@
             this.dgvFornecedor.AllowUserToAddRows = false;
             this.dgvFornecedor.AllowUserToDeleteRows = false;
             this.dgvFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvFornecedor.Location = new System.Drawing.Point(70, 343);
             this.dgvFornecedor.Name = "dgvFornecedor";
             this.dgvFornecedor.ReadOnly = true;
@@ -442,11 +435,20 @@
             this.dgvFornecedor.Visible = false;
             this.dgvFornecedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFornecedor_CellClick);
             // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.Enabled = false;
+            this.txtQuantidade.Location = new System.Drawing.Point(387, 285);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(120, 20);
+            this.txtQuantidade.TabIndex = 34;
+            // 
             // Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(760, 572);
+            this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.dgvFornecedor);
             this.Controls.Add(this.btnPesquisa);
             this.Controls.Add(this.label1);
@@ -464,7 +466,6 @@
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.btnNProduto);
             this.Controls.Add(this.btnFornecedor);
-            this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.label6);
@@ -483,6 +484,7 @@
             this.Text = "Produto";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFornecedor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -502,7 +504,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtPreco;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Button btnFornecedor;
         private System.Windows.Forms.Button btnNProduto;
         private System.Windows.Forms.Button btnSelecionar;
@@ -521,5 +522,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPesquisa;
         private System.Windows.Forms.DataGridView dgvFornecedor;
+        private System.Windows.Forms.NumericUpDown txtQuantidade;
     }
 }

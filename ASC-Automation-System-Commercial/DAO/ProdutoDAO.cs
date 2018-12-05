@@ -190,30 +190,30 @@ namespace ASC_Automation_System_Commercial.DAO
             }
         }
 
-        public DataTable getVProduto(int codigo)
-        {
-            MySqlConnection CN = new MySqlConnection(Con);
-            MySqlCommand Com = CN.CreateCommand();
-            MySqlDataAdapter da;
-            Com.CommandText = "SELECT * FROM produto WHERE codigo_produto = " + codigo;
-            try
-            {
-                CN.Open();
-                Com = new MySqlCommand(Com.CommandText, CN);
-                da = new MySqlDataAdapter(Com);
-                DataTable dtProduto = new DataTable();
-                da.Fill(dtProduto);
-                return dtProduto;
-            }
-            catch (MySqlException ex)
-            {
-                throw new ApplicationException(ex.ToString());
-            }
-            finally
-            {
-                CN.Close();
-            }
-        }
+        //public DataTable getVProduto(int codigo)
+        //{
+        //    MySqlConnection CN = new MySqlConnection(Con);
+        //    MySqlCommand Com = CN.CreateCommand();
+        //    MySqlDataAdapter da;
+        //    Com.CommandText = "SELECT * FROM produto WHERE codigo_produto = " + codigo;
+        //    try
+        //    {
+        //        CN.Open();
+        //        Com = new MySqlCommand(Com.CommandText, CN);
+        //        da = new MySqlDataAdapter(Com);
+        //        DataTable dtProduto = new DataTable();
+        //        da.Fill(dtProduto);
+        //        return dtProduto;
+        //    }
+        //    catch (MySqlException ex)
+        //    {
+        //        throw new ApplicationException(ex.ToString());
+        //    }
+        //    finally
+        //    {
+        //        CN.Close();
+        //    }
+        //}
 
         public void DeletarProduto(Produto produto)
         {
